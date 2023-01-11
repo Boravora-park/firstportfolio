@@ -35,7 +35,7 @@ body {font-size: 16px;}
 .bahn {font-family: 'Bahnschrift', sans-serif; font-weight: lighter;}
 .nw {font-family: 'Newsreader',serif; font-weight: normal;}
 .hel {font-family: 'Helvetica';}
-.bo {font-family: 'BodoniFLF-Italic'; font-style: italic; }
+.bo {font-family: 'BodoniFLF-Italic';}
 .ko {font-family: 'Noto Sans KR', sans-serif;}
 
 .wrap {width: 100%; position: relative; color: #656565;}
@@ -448,15 +448,11 @@ footer .innerFooter >nav ul.motion  {
 }
 
     @media screen and (max-width: 520px){
-        .page {display: none;}
-        br.mo {display: none;}
-        .fix  {font-size: 0.9rem;}
-        .fix .bottom {display: none;}
-        .fix .top .menu .gnb li{font-size: 1.1rem;}
+        br.mo{display: none;}
         .visual .inner >nav {display: none;}
-        .visual .inner .name {margin: 0; line-height: 0.8;}
+        .visual .inner .name {margin: 0; line-height: 0.7;}
         .visual .inner .name .bora {font-size: 9rem;}
-        .visual .inner .name .park {font-size: 9rem;}
+        .visual .inner .name .park {font-size: 9rem; font-weight: 400;}
         .visual .inner .title .port {margin-top: 30px; font-size: 1.3rem;}
         .visual .inner .house {width: 90%;}
         .visual .inner .textBox .center p.img {width: 60%; left: 23%; top: -60px; }
@@ -516,8 +512,11 @@ footer .innerFooter >nav ul.motion  {
     }
 
     @media screen and (max-width: 520px){
+
         .page {display: none;}
         .fix  {font-size: 0.9rem;}
+        .fix .top {margin-top: 0;}
+        .fix .top p.logo a img {width: 75%;}
         .fix .bottom {display: none;}
         .fix .top .menu .gnb li{font-size: 2.5rem;}
         .fix .top .menu .gnb li:nth-child(2) {margin-top: 0;}
@@ -527,7 +526,7 @@ footer .innerFooter >nav ul.motion  {
         footer .innerFooter nav {margin-top: 20px;}
         footer .innerFooter nav ul li {font-size: 0.75rem;}
         footer .innerFooter .bottom .left {font-size: 0.8rem;}
-        footer .innerFooter .bottom {margin-top: 40px;}
+        footer .innerFooter .bottom {margin-top: 40px; margin-bottom: 40px;}
         footer .innerFooter .bottom img {width: 78%;}
         
     }
