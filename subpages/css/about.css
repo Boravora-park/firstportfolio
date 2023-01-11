@@ -417,7 +417,7 @@ footer .innerFooter >nav ul.motion  {
     .story .inner .books {display: block;margin: 0 auto; width: 100%; margin-left: 10px;}
     .story .inner .books .contents {width: 90%;}
     .story .inner .books .contents .side {opacity: 0;}
-    .story .inner .books .contents .text .video{width: 80%}
+
 
     .story .inner .books li.on .side{opacity: 1;}
 
@@ -480,17 +480,21 @@ footer .innerFooter >nav ul.motion  {
 }
 
 @media screen and (max-width: 520px){
+
     .page {display: none;}
     .fix  {font-size: 0.9rem;}
+    .fix .top {margin-top: 0;}
+    .fix .top p.logo a img {width: 75%;}
     .fix .bottom {display: none;}
     .fix .top .menu .gnb li{font-size: 2.5rem;}
+    .fix .top .menu .gnb li:nth-child(2) {margin-top: 0;}
     .fix .top .menu .gnb li span.lnr {font-size: 20px;}
     footer .innerFooter .logo {margin-bottom: 50px;}
     footer .innerFooter .logo a img {width: 50%;}
     footer .innerFooter nav {margin-top: 20px;}
     footer .innerFooter nav ul li {font-size: 0.75rem;}
     footer .innerFooter .bottom .left {font-size: 0.8rem;}
-    footer .innerFooter .bottom {margin-top: 40px;}
+    footer .innerFooter .bottom {margin-top: 40px; margin-bottom: 40px;}
     footer .innerFooter .bottom img {width: 78%;}
     
 }
