@@ -450,9 +450,9 @@ footer .innerFooter >nav ul.motion  {
     @media screen and (max-width: 520px){
         br.mo{display: none;}
         .visual .inner >nav {display: none;}
-        .visual .inner .name {margin: 0; line-height: 0.7;}
-        .visual .inner .name .bora {font-size: 9rem;}
-        .visual .inner .name .park {font-size: 9rem; font-weight: 400;}
+        .visual .inner .name {margin: 0; line-height: 0.8;}
+        .visual .inner .name .bora {font-size: 9rem; font-family:'Newsreader' sans-serif;}
+        .visual .inner .name .park {font-size: 9rem; font-weight: 300;}
         .visual .inner .title .port {margin-top: 30px; font-size: 1.3rem;}
         .visual .inner .house {width: 90%;}
         .visual .inner .textBox .center p.img {width: 60%; left: 23%; top: -60px; }
@@ -474,8 +474,8 @@ footer .innerFooter >nav ul.motion  {
         .like .inner ul {margin-left: 0;}
         .like .inner ul li img {width: 59%;}
         .portfolio .inner .innerTop .top {padding: 0; }
-        .portfolio .inner .innerTop .top .tit {font-size: 1.8rem;}
-        .portfolio .inner .innerTop .contents {font-size: 1rem;}
+        .portfolio .inner .innerTop .top .tit {font-size: 1.6rem; margin: 0 auto;}
+        .portfolio .inner .innerTop .contents {font-size: 0.8rem;}
 
         .portfolio .inner .cording li {padding: 0;margin: 0; width: 100%; margin-bottom: 40px; text-align: center;}
         .portfolio .inner .cording li a img {width: 60%;}
@@ -514,15 +514,16 @@ footer .innerFooter >nav ul.motion  {
     @media screen and (max-width: 520px){
 
         .page {display: none;}
-        .fix  {font-size: 0.9rem;}
-        .fix .top {margin-top: 0;}
-        .fix .top p.logo a img {width: 75%;}
+        .fix  {font-size: 0.8rem;}
+        .fix .top {margin-top: -5px;}
+        .fix .top p.logo a img {width: 70%;}
         .fix .bottom {display: none;}
         .fix .top .menu .gnb li{font-size: 2.5rem;}
         .fix .top .menu .gnb li:nth-child(2) {margin-top: 0;}
         .fix .top .menu .gnb li span.lnr {font-size: 20px;}
+        footer .innerFooter {margin-top: 120px; margin-bottom: 0;}
         footer .innerFooter .logo {margin-bottom: 50px;}
-        footer .innerFooter .logo a img {width: 50%;}
+        footer .innerFooter .logo a img {width: 40%;}
         footer .innerFooter nav {margin-top: 20px;}
         footer .innerFooter nav ul li {font-size: 0.75rem;}
         footer .innerFooter .bottom .left {font-size: 0.8rem;}
