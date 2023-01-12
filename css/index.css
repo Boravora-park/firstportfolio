@@ -455,7 +455,7 @@ footer .innerFooter >nav ul.motion  {
         br.mo{display: none;}
         .visual .inner {margin-top: 60px;}
         .visual .inner >nav {display: none;}
-        .visual .inner .name {margin: 0; line-height: 0.8;}
+        .visual .inner .name {margin: 25px; line-height: 0.8;}
         .visual .inner .name .bora {font-size: 9rem;}
         .visual .inner .name .park {font-size: 8.5rem; font-weight: 300; }
         .visual .inner .title .port {margin-top: 30px; font-size: 1.3rem;}
@@ -535,7 +535,7 @@ footer .innerFooter >nav ul.motion  {
         footer .innerFooter nav {margin-top: 10px;}
         footer .innerFooter nav ul li {font-size: 0.75rem;}
         footer .innerFooter .bottom .left {font-size: 0.8rem;}
-        footer .innerFooter .bottom {margin-top: 25px; margin-bottom: 0px;}
+        footer .innerFooter .bottom {margin-top: 25px; margin-bottom: 50px;}
         footer .innerFooter .bottom img {width: 75%; margin-top: 20px;}
         
     }
