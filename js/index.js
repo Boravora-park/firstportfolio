@@ -3,7 +3,8 @@ var fixedNum_first = $("section.intro").offset().top;
 var fixedNum_second = $("section.hobbies").offset().top;
 var fixedNum_third = $("section.like").offset().top;
 var fixedNum_forth = $("section.portfolio").offset().top;
-var fixedNum_fifth = $("section.footer").offset().top;
+var fixedNum_fifth = $("section.end").offset().top;
+
     console.log(fixedNum_second);
 /* ====스크롤값을 불러오는 함수 시작==== */
     $(window).resize(function(){
@@ -25,7 +26,6 @@ var fixedNum_fifth = $("section.footer").offset().top;
         }
         // likes
         if(scrollTop >= fixedNum_third){
-      
             $(".fix .page.page.bahn .num").text("03/");
             $(".fix .page.page.bahn .text").text("likes");
         }
