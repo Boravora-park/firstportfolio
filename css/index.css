@@ -61,8 +61,8 @@ body {font-size: 16px;}
 .fix .bottom {width: 100%; display: flex; justify-content: space-between; position: absolute;margin-top: 85vh; left: 0%; padding: 20px; box-sizing: border-box;}
 .fix .bottom .copy {transform: rotate(270deg); transform-origin: left; margin-left: 10px;}
 
-.fix .page.page.bahn {opacity: 0;}
-.fix .page.page.bahn.on{width: 100%; bottom: 0; left: 0; text-align: center; display: block; font-size: 0.9rem; margin-bottom: 20px; opacity: 1 ;position: fixed; }
+.fix .page.page.bahn {opacity: 0; width: 100%; bottom: 0; left: 0; text-align: center; display: block; font-size: 0.9rem; margin-bottom: 20px; position: fixed; }
+.fix .page.page.bahn.on{opacity: 1;}
 
 
 nav {width: 95%; margin: 0 auto; margin-top: 40px;}

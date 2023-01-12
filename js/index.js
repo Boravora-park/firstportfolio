@@ -1,5 +1,53 @@
-     //스크립트 위로 튕기는것
-     $(document).on('click', 'a[href="#"]', function(e){
+// 외부변수선언
+var fixedNum_first = $("section.intro").offset().top;
+var fixedNum_second = $("section.hobbies").offset().top;
+var fixedNum_third = $("section.like").offset().top;
+var fixedNum_forth = $("section.portfolio").offset().top;
+var fixedNum_fifth = $("section.footer").offset().top;
+    console.log(fixedNum_second);
+/* ====스크롤값을 불러오는 함수 시작==== */
+    $(window).resize(function(){
+        $(document).on("scroll resize", function(){
+        // 스크롤탑값 변수
+        var scrollTop = $(document).scrollTop();
+        // console.log(scrollTop);
+
+        // intro
+        if(scrollTop >= fixedNum_first){
+            $(".fix .page.page.bahn").addClass("on");
+            $(".fix .page.page.bahn .num").text("01/");
+            $(".fix .page.page.bahn .text").text("intro");
+        }
+        // hobbies
+        if(scrollTop >= fixedNum_second){
+            $(".fix .page.page.bahn .num").text("02/");
+            $(".fix .page.page.bahn .text").text("hobbies");
+        }
+        // likes
+        if(scrollTop >= fixedNum_third){
+      
+            $(".fix .page.page.bahn .num").text("03/");
+            $(".fix .page.page.bahn .text").text("likes");
+        }
+        // portfolio
+        if(scrollTop >= fixedNum_forth){
+            $("#top").addClass("on");
+            $(".fix .page.page.bahn .num").text("04/");
+            $(".fix .page.page.bahn .text").text("portfolio");
+        }
+        //footer
+        if(scrollTop >= fixedNum_fifth){
+            $("#top").removeClass("on");
+
+            $(".fix .page.page.bahn .num").text("05/");
+            $(".fix .page.page.bahn .text").text("footer");
+        }
+    });
+    }).resize(); 
+
+
+//스크립트 위로 튕기는것
+    $(document).on('click', 'a[href="#"]', function(e){
         e.preventDefault();
     });
 //splitting
@@ -73,174 +121,4 @@ $(".cording li").hover(function(){
         $(".contents").text("Bmagazine");
     }
 });
-
-
-$(document).on("scroll resize", function(){
-
-var scrollTop = $(document).scrollTop();
-console.log(scrollTop);
-
-fix();
-function fix(){
-if(scrollTop >= 7800){
-    $("#top").addClass("on");
-} else{
-    $("#top").removeClass("on");
-}if(scrollTop > 11000){
-    $("#top").removeClass("on");
-}
-};
-});
-if($(window).width()<=1700) {
-    $(document).on("scroll resize", function(){
-
-    var scrollTop = $(document).scrollTop();
-    console.log(scrollTop);
-
-    fix();
-    function fix(){
-    if(scrollTop >= 6000){
-        $("#top").addClass("on");
-    } else{
-        $("#top").removeClass("on");
-    }if(scrollTop > 10000){
-        $("#top").removeClass("on");
-    }
-    };
-});
-}
-
-if($(window).width()<=1400) {
-    $(document).on("scroll resize", function(){
-
-    var scrollTop = $(document).scrollTop();
-    console.log(scrollTop);
-
-    fix();
-    function fix(){
-    if(scrollTop >= 5800){
-        $("#top").addClass("on");
-    } else{
-        $("#top").removeClass("on");
-    }if(scrollTop > 7800){
-        $("#top").removeClass("on");
-    }
-    };
-});
-}
-
-if($(window).width()<=1100) {
-    $(document).on("scroll resize", function(){
-
-    var scrollTop = $(document).scrollTop();
-    console.log(scrollTop);
-
-    fix();
-    function fix(){
-    if(scrollTop >= 6200){
-        $("#top").addClass("on");
-    } else{
-        $("#top").removeClass("on");
-    }if(scrollTop > 9000){
-        $("#top").removeClass("on");
-    }
-    };
-});
-}
-
-if($(window).width()<=520) {
-    $(document).on("scroll resize", function(){
-
-    var scrollTop = $(document).scrollTop();
-    console.log(scrollTop);
-
-    fix();
-    function fix(){
-    if(scrollTop >= 6300){
-        $("#top").addClass("on");
-    } else{
-        $("#top").removeClass("on");
-    }if(scrollTop > 7500){
-        $("#top").removeClass("on");
-    }
-    };
-});
-}
-
-
-$(document).on("scroll resize", function(){
-
-var scrollTop = $(document).scrollTop();
-
-fix();
-function fix(){
-if(scrollTop >= 1000){
-    $("#page").addClass("on");
-}else{
-    $("#page").removeClass("on");
-}if(scrollTop < 1000){
-    $("#page").removeClass("on");
-}if(scrollTop > 8000){
-    $("#page").removeClass("on");
-}
-};
-});
-
-$(function(){
-    $('.footersvg').find('path'/* ,'polygon' */).each(function(i, path){
-        var length = path.getTotalLength();
-        /* console.log(length); */
-    });
-});
-
-
-    // 마우스스크롤부드럽게
-/* class Scrooth {
-  constructor({element = window, strength=10, acceleration = 1.2,deceleration = 0.975}={}) {
-    this.element = element;
-    this.distance = strength;
-    this.acceleration = acceleration;
-    this.deceleration = deceleration;
-    this.running = false;
-
-    this.element.addEventListener('wheel', this.scrollHandler.bind(this), {passive: false});
-    this.element.addEventListener('mousewheel', this.scrollHandler.bind(this), {passive: false});
-    this.scroll = this.scroll.bind(this);
-  }
-
-  scrollHandler(e) {
-    e.preventDefault();
-
-    if (!this.running) {
-      this.top = this.element.pageYOffset || this.element.scrollTop || 0;
-      this.running = true;
-      this.currentDistance = e.deltaY > 0 ? 0.1 : -0.1;
-      this.isDistanceAsc = true;
-      this.scroll();
-    } else {
-      this.isDistanceAsc = false;
-      this.currentDistance = e.deltaY > 0 ? this.distance : -this.distance;
-    }
-  }
-
-  scroll() {
-    if (this.running) {
-      this.currentDistance *= this.isDistanceAsc === true ? this.acceleration : this.deceleration;
-      Math.abs(this.currentDistance) < 0.1 && this.isDistanceAsc === false ? this.running = false : 1;
-      Math.abs(this.currentDistance) >= Math.abs(this.distance) ? this.isDistanceAsc = false : 1;
-
-      this.top += this.currentDistance;
-      this.element.scrollTo(0, this.top);
-      
-      requestAnimationFrame(this.scroll);
-    }
-  }
-}
-
-const scroll = new Scrooth({
-  element: window,
-  strength: 30, // 스크롤 한번 할때 내려가는 길이(=속도)조절
-  acceleration: 1.5,
-  deceleration: 0.975,
-}); */
 
