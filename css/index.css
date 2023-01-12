@@ -79,7 +79,7 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 .visual {position: relative; overflow: hidden; }
 .visual .inner {width: 99%; height: 100vh; margin: 0 auto;}
 .visual .inner .name {text-align: center; margin-top: 8%; color:#222222; letter-spacing: -15px;} 
-.visual .inner .name .bora {font-style: italic; font-size: 17rem; letter-spacing: -10px;}
+.visual .inner .name .bora {font-family: 'bodoniFLF'; font-style: italic; font-size: 17rem; letter-spacing: -10px;}
 .visual .inner .name .park {font-size: 16rem; letter-spacing: 1px;}
 .visual .inner .title {text-align: center; position: relative; margin-top: -30px;}
 .visual .inner .title .port {font-size: 2.2rem; font-style:italic;}
@@ -451,8 +451,8 @@ footer .innerFooter >nav ul.motion  {
         br.mo{display: none;}
         .visual .inner >nav {display: none;}
         .visual .inner .name {margin: 0; line-height: 0.8;}
-        .visual .inner .name .bora {font-size: 9rem; font-family:'Newsreader' sans-serif;}
-        .visual .inner .name .park {font-size: 9rem; font-weight: 300;}
+        .visual .inner .name .bora {font-size: 9rem;}
+        .visual .inner .name .park {font-size: 8.5rem; font-weight: 300; }
         .visual .inner .title .port {margin-top: 30px; font-size: 1.3rem;}
         .visual .inner .house {width: 90%;}
         .visual .inner .textBox .center p.img {width: 60%; left: 23%; top: -60px; }
@@ -521,13 +521,13 @@ footer .innerFooter >nav ul.motion  {
         .fix .top .menu .gnb li{font-size: 2.5rem;}
         .fix .top .menu .gnb li:nth-child(2) {margin-top: 0;}
         .fix .top .menu .gnb li span.lnr {font-size: 20px;}
-        footer .innerFooter {margin-top: 120px; margin-bottom: 0;}
+        footer .innerFooter {margin-top: 150px; margin-bottom: 0;}
         footer .innerFooter .logo {margin-bottom: 50px;}
         footer .innerFooter .logo a img {width: 40%;}
         footer .innerFooter nav {margin-top: 20px;}
         footer .innerFooter nav ul li {font-size: 0.75rem;}
         footer .innerFooter .bottom .left {font-size: 0.8rem;}
-        footer .innerFooter .bottom {margin-top: 40px; margin-bottom: 40px;}
-        footer .innerFooter .bottom img {width: 78%;}
+        footer .innerFooter .bottom {margin-top: 40px; margin-bottom: 20px;}
+        footer .innerFooter .bottom img {width: 75%;}
         
     }
