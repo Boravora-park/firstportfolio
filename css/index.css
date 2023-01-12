@@ -455,7 +455,7 @@ footer .innerFooter >nav ul.motion  {
         br.mo{display: none;}
         .visual .inner {margin-top: 60px;}
         .visual .inner >nav {display: none;}
-        .visual .inner .name {margin: 25px; line-height: 0.8;}
+        .visual .inner .name {margin-top: 25px; line-height: 0.8;}
         .visual .inner .name .bora {font-size: 9rem;}
         .visual .inner .name .park {font-size: 8.5rem; font-weight: 300; }
         .visual .inner .title .port {margin-top: 30px; font-size: 1.3rem;}
