@@ -38,7 +38,6 @@ var fixedNum_fifth = $("section.footer").offset().top;
         //footer
         if(scrollTop >= fixedNum_fifth){
             $("#top").removeClass("on");
-
             $(".fix .page.page.bahn .num").text("05/");
             $(".fix .page.page.bahn .text").text("footer");
         }

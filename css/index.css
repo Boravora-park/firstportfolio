@@ -270,52 +270,7 @@ nav ul li:nth-child(5){animation-duration: 0.6s;}
 
 
 /* footer */
-footer {width: 100%; overflow: hidden;}
-footer .innerFooter {width: 100%; margin-top: 100px;}
-footer .innerFooter .logo {margin-top: 50px; margin-bottom: 50px; text-align: center;}
-footer .innerFooter nav {width: 95%; margin: 0 auto; margin-top: 60px;}
-footer .innerFooter nav ul {display: flex; justify-content: space-between;}
-footer .innerFooter nav ul li {font-weight: 400; font-size: 18px;}
-footer .innerFooter .bottom {width: 89%; margin: 0 auto; display: flex; justify-content: space-between; margin-top: 50px; color: #222; margin-bottom: 30px;}
-footer .innerFooter .bottom .left {display: inline-block; width: 32%; font-style: italic; padding-top: 180px; font-size: 20px; padding-left: 100px; box-sizing: border-box;  font-weight: 500;}
-footer .innerFooter .bottom .left .text {margin-top: 30px; line-height: 1;}
-footer .innerFooter .bottom img {width: 100%; margin-top: 10px; text-align: center;}
 
-footer .innerFooter .bottom .right {width: 32%;text-align: center; margin-top: 100px;}
-footer .innerFooter .bottom .right .txt {text-align: center;font-size: 2.5rem; font-style: italic; color: #222; margin-bottom: 30px;}
-footer .innerFooter .bottom .right svg {width: 50%;}
-
-/* animation */
-
-@keyframes footersvg {
-    0% {stroke-dashoffset:2375;}
-    100% {stroke-dashoffset:0;}
-}
-footer .innerFooter .bottom .right svg {fill: none; stroke: #222; stroke-width: 3; stroke-dasharray: 2357; stroke-dashoffset: 0; animation-name: footersvg; animation-duration: 4s; animation-iteration-count: infinite;}
-
-
-
-@keyframes textAni{ 
-    0%{opacity: 0; transform: translateY(-100px);}
-    30%{opacity: 1; transform: translateY(-100px);}
-    70%{opacity: 1; transform: translateY(-0px);}
-}
-footer .innerFooter .right .txt .char{
-    animation: textAni 0.5s infinite;
-    animation-delay: calc(0.08s*var(--char-index));
-}
-footer .innerFooter .logo.motion {animation: opacity 0.5s both;}
-
-footer .innerFooter .bottom .left.motion .char {
-    animation: maintextAni 0.5s both;
-    animation-delay: calc(0.08s*var(--word-index));
-}
-footer .innerFooter .bottom p.img.motion {
-    animation: opacity 0.5s;
-}
-footer .innerFooter >nav ul.motion  {
-    animation: opacity 0.5s;
-}
 
 
 @media screen and (max-width: 1770px) {
