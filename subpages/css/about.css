@@ -38,7 +38,7 @@ body {font-size: 16px;}
 .bo {font-family: 'BodoniFLF-Italic'; font-style: italic; }
 .ko {font-family: 'Noto Sans KR', sans-serif;}
 
-.wrap {width: 100%; position: relative; color: #222;}
+.wrap {width: 100%; position: relative;}
 
 
 /* main */
@@ -219,6 +219,7 @@ body {font-size: 16px;}
 .story .inner .books .contents .text .video {margin: 20px auto; width: 80%; object-fit: cover; align-items: center;}
 .story .inner .books .contents .text .kor {font-size: 10px; margin-bottom: 20px; width: 82%; margin: 0 auto;}
 .story .inner .books .contents .text .eng {font-size: 12px; width: 82%; margin: 0 auto; }
+
 
 /* animation */
 .story {animation: opacity 1s;}

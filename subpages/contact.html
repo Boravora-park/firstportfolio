@@ -108,23 +108,29 @@
       </div>
   </footer>
   <script>
-   //1.스크립트 위로 튕기는것
-    $(document).on('click', 'a[href="#"]', function(e){
+//스크립트 위로 튕기는것
+$(document).on('click', 'a[href="#"]', function(e){
         e.preventDefault();
-        });
-
-        
-        $(function(){
-            $(".menuOpen").on('click', function(){
-                $(".gnb").addClass("on");
-            });
-            $(".close").on('click', function(){
-                $(".gnb").removeClass("on");
-            });
-        });
-
-    //splitting
+    });
+//splitting
     $(function(){Splitting();});
+
+//gnb
+    $(function(){
+        $(".menuOpen").on('click', function(){
+            $(".gnb").addClass("on");
+        });
+        $(".close").on('click', function(){
+            $(".gnb").removeClass("on");
+        });
+    });
+//scrolla animation
+    $(function(){
+        $('.animate').scrolla({
+            mobile: true,
+            once:false
+        });
+    });
   </script>
   </div>
     

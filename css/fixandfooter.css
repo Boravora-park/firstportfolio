@@ -65,7 +65,7 @@ body {font-size: 16px;}
 .fix .page.page.bahn.on{opacity: 1;}
 
 
-nav {width: 95%; margin: 0 auto; margin-top: 40px;}
+nav {width: 95%; margin: 0 auto; margin-top: 40px; color: #656565;}
 nav ul {display: flex; justify-content: space-between; font-weight: 400;}
 nav ul li {font-size: 18px; position: relative;}
 nav ul li:before {content: '';  background: rgba(175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0; cursor: pointer;}
@@ -74,7 +74,7 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 
 
 /* footer */
-footer {width: 100%; overflow: hidden;}
+footer {width: 100%; overflow: hidden; color: #656565;}
 footer .innerFooter {width: 100%; margin-top: 100px;}
 footer .innerFooter .logo {margin-top: 50px; margin-bottom: 50px; text-align: center;}
 footer .innerFooter nav {width: 95%; margin: 0 auto; margin-top: 60px;}

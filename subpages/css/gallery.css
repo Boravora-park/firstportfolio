@@ -39,8 +39,8 @@ body {font-size: 16px;}
 
 .wrap {width: 100%; position: relative; color: #656565;}
 
-.title {float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 42%; right:0; margin-right: -90px;}
-.title.on {display: none;}
+.title {float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 42%; right:0; margin-right: -90px; opacity: 0;}
+.title.on {opacity: 1;}
 
 /* main */
 .main {width: 100%; overflow: hidden;}
@@ -90,7 +90,7 @@ body {font-size: 16px;}
 .renewal .inner .right .site p.img {width: 100%; position: absolute; top: 30vh; left:0; margin-bottom: 300px; }
 .renewal .inner .right .site p.img img {width: 100%;}
 
-.ncs {width: 100%; overflow: hidden; margin:100px 0 100px; }
+.ncs {width: 100%; overflow: hidden; margin:100px 0 200px; }
 .ncs .inner {width: 80%; margin: 0 auto;}
 .ncs .inner .tit {width: 100%; font-size: 3rem; text-align: center; font-weight: bold; color: #222;}
 .ncs .inner .txt {font-size: 1.3rem; text-align: center; margin-top: 50px;}
@@ -159,4 +159,6 @@ body {font-size: 16px;}
     .clonecording .inner .contents li p.txt {font-size: 3.8vw}
     .renewal .inner .left .button {font-size: 13px;}
 }
-
+@media screen and (max-width: 560px){
+    .title {display: none;}
+}

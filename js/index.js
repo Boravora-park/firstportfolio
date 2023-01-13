@@ -5,20 +5,23 @@ var fixedNum_third = $("section.like").offset().top;
 var fixedNum_forth = $("section.portfolio").offset().top;
 var fixedNum_fifth = $("section.end").offset().top;
 
-    console.log(fixedNum_second);
+//console.log(fixedNum_second);
 /* ====스크롤값을 불러오는 함수 시작==== */
     $(window).resize(function(){
         $(document).on("scroll resize", function(){
         // 스크롤탑값 변수
         var scrollTop = $(document).scrollTop();
         // console.log(scrollTop);
-
         // intro
+        
         if(scrollTop >= fixedNum_first){
             $(".fix .page.page.bahn").addClass("on");
             $("#top").removeClass("on");
             $(".fix .page.page.bahn .num").text("01/");
             $(".fix .page.page.bahn .text").text("intro");
+        }
+        else if(scrollTop < fixedNum_first){
+            $(".fix .page.page.bahn").removeClass("on");
         }
         // hobbies
         if(scrollTop >= fixedNum_second){
