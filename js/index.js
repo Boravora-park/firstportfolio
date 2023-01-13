@@ -26,6 +26,7 @@ var fixedNum_fifth = $("section.end").offset().top;
         }
         // likes
         if(scrollTop >= fixedNum_third){
+            $("#top").removeClass("on");
             $(".fix .page.page.bahn .num").text("03/");
             $(".fix .page.page.bahn .text").text("likes");
         }
