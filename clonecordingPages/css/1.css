@@ -59,7 +59,7 @@ body {font-size: 16px;}
 .fix .top .menu .gnb li:nth-child(1):before {display: none;}
 .fix .top .menu .gnb li:hover {-webkit-text-stroke:#fff 1px; color: transparent; font-style: italic;}
 .fix .top .menu .gnb .close {font-size: 1.2rem; text-align: right; display: block; margin-right: 20px;}
-.fix .bottom {width: 100%; display: flex; justify-content: space-between; position: absolute; margin-top: 85vh; left: 0%; padding: 20px; box-sizing: border-box;}
+.fix .bottom {width: 100%; display: flex; justify-content: space-between; position: absolute; /* top: 1310%; */ margin-top: 85vh; left: 0%; padding: 20px; box-sizing: border-box;}
 .fix .bottom .copy {transform: rotate(270deg); transform-origin: left; margin-left: 10px;}
 
 nav {width: 95%; margin: 0 auto; margin-top: 40px;}
@@ -73,25 +73,23 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 
 /* main */
 .main {width: 100%; overflow: hidden;  margin-bottom: 350px; }
-.main .text {width: 80%; margin: 0 auto; text-align: right; position: relative; }
+.main .text {width: 80%; margin: 0 auto; text-align: right;position: relative;}
+.main .text .num {position: absolute; font-size: 10rem; font-weight: 500; top: 0; left: -13%; color: #ddd; margin-left: -2.8%; }
 
-.main .text .num {position: absolute; font-size: 9rem; font-weight: 500; top: -20px; left: -13%; color: #ddd; margin-left: -2.8%; }
 
-
-.main .text .tit {width: 100%; text-align: center; margin: 400px 0 0; font-size: 5rem; font-weight: 500; color: #ddd; margin-left: -50px;}
-.main .text .list {margin: 10px auto; margin-left: 59%;}
+.main .text .tit {width: 100%; text-align: center; margin: 400px 0 0; font-size: 6rem; font-weight: 500; color: #ddd;}
+.main .text .list {margin: 10px auto; margin-left: 65%;}
 .main .text .list li:hover {background: #fff; color: #222;}
 
 .main .text .list li {float: left; margin-left: 5px; padding: 3px 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 0.5rem; font-size: 0.9rem; }
 
-.main .text .txt {margin: 60px auto; text-align: right;  margin-right:31%; }
-
+.main .text .txt {margin: 60px auto; text-align: right;  margin-right:25%; }
+.main .text .txt span {font-weight: bold; font-style: italic;}
 /* animation */
-.main .text .tit.motion .char{-webkit-animation: maintextAni 0.3s both;animation: maintextAni 0.3s both;-webkit-animation-delay: calc(0.05s*var(--char-index));animation-delay: calc(0.05s*var(--char-index));}
-.main .num.motion .char {-webkit-animation: maintextAni 0.3s both;animation: maintextAni 0.3s both; -webkit-animation-delay: calc(0.05s*var(--char-index)); animation-delay: calc(0.05s*var(--char-index));}
-
-.main .text .list.motion {-webkit-animation-name: opacity;animation-name: opacity; -webkit-animation-duration: 0.3s; animation-duration: 0.3s;}
-.main .text .txt.motion {-webkit-animation-name: opacity;animation-name: opacity; -webkit-animation-duration: 0.3s; animation-duration: 0.3s;}
+.main .text .tit.motion .char{animation: maintextAni 0.3s both;animation-delay: calc(0.05s*var(--char-index));}
+.main .num.motion .char {animation: maintextAni 0.3s both; animation-delay: calc(0.05s*var(--char-index));}
+.main .text .list.motion {animation-name: opacity; animation-duration: 0.3s;}
+.main .text .txt.motion {animation-name: opacity; animation-duration: 0.3s;}
 /* ex */
 .ex {width: 100%; overflow: hidden;}
 .ex .inner {width: 70%; margin: 50px auto 0;} 
@@ -110,67 +108,12 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 .ex .inner p.img > img {width: 100%;}
 
 /* animation */
-.ex .inner .mySwiper .swiper-wrapper .swiper-slide a img:hover {-webkit-filter: grayscale(1);filter: grayscale(1); transition: all 0.2s; transform: scale(0.9);}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide a img:hover {filter: grayscale(1); transition: all 0.2s; transform: scale(0.9);}
 
-
-
-/* footer */
-footer {width: 100%; overflow: hidden;}
-footer .innerFooter {width: 100%; margin-top: 100px; margin-bottom: 50px;}
-footer .innerFooter .logo {margin-top: 50px; margin-bottom: 100px; text-align: center;}
-footer .innerFooter nav {width: 95%; margin: 0 auto; margin-top: 60px;}
-footer .innerFooter nav ul {display: flex; justify-content: space-between;}
-footer .innerFooter nav ul li {font-weight: 400; font-size: 18px;}
-footer .innerFooter .bottom {width: 89%; margin: 0 auto; display: flex; justify-content: space-between; margin-top: 50px; color: #222;}
-footer .innerFooter .bottom .left {display: inline-block; width: 32%; font-style: italic; padding-top: 180px; font-size: 20px; padding-left: 100px; box-sizing: border-box;  font-weight: 500;}
-footer .innerFooter .bottom .left .text {margin-top: 30px; line-height: 1;}
-footer .innerFooter .bottom img {width: 100%; margin-top: 10px; text-align: center;}
-
-footer .innerFooter .bottom .right {width: 32%;text-align: center; margin-top: 100px;}
-footer .innerFooter .bottom .right .txt {text-align: center;font-size: 2.5rem; font-style: italic; color: #222; margin-bottom: 30px;}
-footer .innerFooter .bottom .right svg {width: 50%;}
-
-/* animation */
-
-@-webkit-keyframes footersvg {
-    0% {stroke-dashoffset:2375;}
-    100% {stroke-dashoffset:0;}
-}
-
-@keyframes footersvg {
-    0% {stroke-dashoffset:2375;}
-    100% {stroke-dashoffset:0;}
-}
-footer .innerFooter .bottom .right svg {fill: none; stroke: #222; stroke-width: 3; stroke-dasharray: 2357; stroke-dashoffset: 0; -webkit-animation-name: footersvg; animation-name: footersvg; -webkit-animation-duration: 4s; animation-duration: 4s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
-
-
-footer .innerFooter .right .txt .char{
-    -webkit-animation: textAni 0.5s infinite;
-            animation: textAni 0.5s infinite;
-    -webkit-animation-delay: calc(0.08s*var(--char-index));
-            animation-delay: calc(0.08s*var(--char-index));
-}
-footer .innerFooter .logo.motion {-webkit-animation: opacity 0.5s both;animation: opacity 0.5s both;}
-
-footer .innerFooter .bottom .left.motion .char {
-    -webkit-animation: maintextAni 0.5s both;
-            animation: maintextAni 0.5s both;
-    -webkit-animation-delay: calc(0.08s*var(--word-index));
-            animation-delay: calc(0.08s*var(--word-index));
-}
-footer .innerFooter .bottom p.img.motion {
-    -webkit-animation: opacity 0.5s;
-            animation: opacity 0.5s;
-}
-footer .innerFooter >nav ul.motion  {
-    -webkit-animation: opacity 0.5s;
-            animation: opacity 0.5s;
-}
 
 /* responsive */
 
 @media screen and (max-width:1440px){
-    .main .text .tit {margin-left: 0;}
     .main .text .list {margin-left: 68%;}
     .main .text .txt {margin-right: 17%;}
 
@@ -225,55 +168,3 @@ footer .innerFooter >nav ul.motion  {
     .ex .inner .mySwiper .swiper-button-prev:after {font-size: 1rem;}
 }
 
-
-
-/* footer & gnb */
-@media screen and (max-width: 1440px) {
-    .fix .top .menu .gnb {width: 45%;}
-
-    footer .innerFooter .bottom .right {margin-top: 150px;}
-    footer .innerFooter .bottom {width: 90%; margin: 100px auto;}
-    footer .innerFooter .bottom img {width: 100%;}
-
-    footer .innerFooter .bottom .left { font-size: 0.98rem; overflow: hidden; padding-left: 0; text-align: center;}
-    footer .innerFooter .bottom .left .text {line-height: 1.3; }
-    footer .innerFooter .bottom .right .txt {font-size: 1.5rem;}
-
-}
-@media screen and (max-width: 1024px){
-    footer .innerFooter .bottom .right {margin-top: 160px;}
-
-}
-@media screen and (max-width: 820px){
-    .fix .top .menu .gnb {width: 100%;}
-
-    nav ul {width: 90%; margin: 0 auto; }
-    nav ul li {font-size: 1rem;}
-    footer .innerFooter .bottom {display: block;text-align: center; margin-top: 50px;}
-    footer .innerFooter .bottom .left {width: 100%; padding: 0; font-size: 1rem; overflow: hidden;}
-    footer .innerFooter .bottom img {width: 52%; margin: 0 auto; margin-top: 20px;}
-    footer .innerFooter .bottom .right {display: none;}
-    footer .innerFooter .txt {font-size: 3rem;}
-    footer .innerFooter .bottom img {width: 50%;}
-}
-
-@media screen and (max-width: 520px){
-
-    .page {display: none;}
-    .fix  {font-size: 0.9rem;}
-    .fix .top {margin-top: 0;}
-    .fix .top p.logo a img {width: 75%;}
-    .fix .bottom {display: none;}
-    .fix .top .menu .gnb li{font-size: 2.5rem;}
-    .fix .top .menu .gnb li:nth-child(2) {margin-top: 0;}
-    .fix .top .menu .gnb li span.lnr {font-size: 20px;}
-    footer .innerFooter .logo {margin-bottom: 30px;}
-    footer .innerFooter .logo a img {width: 50%;}
-    footer .innerFooter nav {margin-top: 20px;}
-    footer .innerFooter nav ul li {font-size: 0.75rem;}
-    footer .innerFooter .bottom .left {font-size: 0.8rem;}
-    footer .innerFooter .bottom {margin-top: 40px; margin-bottom: 40px;}
-    footer .innerFooter .bottom img {width: 78%;}
-    
-    
-}
