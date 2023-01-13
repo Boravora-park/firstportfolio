@@ -16,11 +16,13 @@ var fixedNum_fifth = $("section.end").offset().top;
         // intro
         if(scrollTop >= fixedNum_first){
             $(".fix .page.page.bahn").addClass("on");
+            $("#top").removeClass("on");
             $(".fix .page.page.bahn .num").text("01/");
             $(".fix .page.page.bahn .text").text("intro");
         }
         // hobbies
         if(scrollTop >= fixedNum_second){
+            $("#top").removeClass("on");
             $(".fix .page.page.bahn .num").text("02/");
             $(".fix .page.page.bahn .text").text("hobbies");
         }
