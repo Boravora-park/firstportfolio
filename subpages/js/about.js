@@ -23,7 +23,7 @@ $(function(){
 });
 
 
-$(function(){
+/* $(function(){
     $(".info .inner .korClick").on('click', function(){
         $(".kor").addClass("on");
         $(".eng").removeClass("on");
@@ -101,5 +101,5 @@ $(document).ready(function(){
                 $(".title .num").text("05/");
                 $(".title .subTit").text("Risk Taker");
             }
-        });
+        }); */
 
