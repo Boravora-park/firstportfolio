@@ -174,11 +174,11 @@ body {font-size: 16px;}
 .risk .inner {width: 80%; margin: 100px auto;}
 .risk .inner .text {text-align: center; font-size: 100px; font-weight: 400; -webkit-text-stroke: #707070 1px; color: transparent; line-height: 1; font-style: oblique; letter-spacing: -1; margin-top: 200px; z-index: 20;}
 .risk .inner ul {width: 100%;  display: flex; justify-content: space-between;}
-.risk .inner ul li {width: 20%;}
+.risk .inner ul li {width: 18%;}
 .risk .inner ul li img {width: 100%;}
 .risk .inner ul li:nth-child(1){margin-top: -200px; margin-right: 50px;}
 .risk .inner ul li:nth-child(2) {margin-top: 30px; width: 30%;}
-.risk .inner ul li:nth-child(3) {margin-left: 50px; margin-top: 50px;}
+.risk .inner ul li:nth-child(3) {margin-left: 50px; margin-top: 50px; width: 25%;}
 .risk .inner ul li:nth-child(4) {margin-top: 200px; width: 20%; margin-right: -50px;}
 
 /* animation */
