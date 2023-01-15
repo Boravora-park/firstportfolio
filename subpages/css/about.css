@@ -374,7 +374,8 @@ body {font-size: 16px;}
 
 
     .story .mo2 {display: block; width: 80%; margin: 10px auto; overflow: hidden; text-align: center;} 
-    .story .mo2 li {font-size: 1rem; font-weight: bold;  color: #707070; text-align: center;  margin-bottom: 3px; margin: 0 auto; margin-bottom: 5px;}
+    .story .mo2 li {font-size: 1rem; font-weight: bold;  color: #707070; text-align: center;  margin-bottom: 3px; margin: 0 auto; margin-bottom: 5px; cursor: pointer;}
+    .story .mo2 li:hover {color: #222;}
     .story .mo2 li.on {color: #222;}
     .story .mo2 li span{font-weight: normal; font-size: 0.6rem;}
     .story .inner .books {display: block;margin: 0 auto; width: 100%; margin-left: 10px;}
