@@ -56,19 +56,25 @@ body {font-size: 16px;}
 
 /* animation */
 .main .inner .right.motion .char {
-        animation: maintextAni 0.2s both;
-        animation-delay: calc(0.02s*var(--word-index));
+        -webkit-animation: maintextAni 0.2s both;
+                animation: maintextAni 0.2s both;
+        -webkit-animation-delay: calc(0.02s*var(--word-index));
+                animation-delay: calc(0.02s*var(--word-index));
 }
 .main .inner .left.motion {
-    animation: opacity 0.3s;
+    -webkit-animation: opacity 0.3s;
+            animation: opacity 0.3s;
 }
 .main .inner .bottom.motion .char {
-    animation: maintextAni 0.3s both;
-    animation-delay: calc(0.05s*var(--char-index));
+    -webkit-animation: maintextAni 0.3s both;
+            animation: maintextAni 0.3s both;
+    -webkit-animation-delay: calc(0.05s*var(--char-index));
+            animation-delay: calc(0.05s*var(--char-index));
 }
 
 .main .inner .bottom.motion {
-    animation: opacity 0.5s;
+    -webkit-animation: opacity 0.5s;
+            animation: opacity 0.5s;
 }
 /* skill */
 .skill {width: 100%; font-style: italic;  overflow: hidden;}
@@ -76,25 +82,37 @@ body {font-size: 16px;}
 .skill .inner .left {width: 50%; text-align: left; float: left; }
 .skill .inner .left .text.kor {margin-top: 20px; font-size: 0.8rem; font-style: normal; }
 .skill .inner .right {width: 50%; text-align: right;  float: right;}
-.skill .inner .right .computer {font-size: 60px; line-height: 1.2; font-weight: bold; color: transparent; -webkit-text-stroke: #222 1px;  margin-bottom: 50px; animation-name: slide-up; animation-duration: 0.8s;}
+.skill .inner .right .computer {font-size: 60px; line-height: 1.2; font-weight: bold; color: transparent; -webkit-text-stroke: #222 1px;  margin-bottom: 50px; -webkit-animation-name: slide-up; animation-name: slide-up; -webkit-animation-duration: 0.8s; animation-duration: 0.8s;}
 .skill .inner .right .computer li:nth-child(4) {padding-bottom: 100px;}
 
 /* animation */
 
-.skill .inner .left.motion {animation: opacity 0.5s;}
-.skill .inner .right .rightText.motion {animation: opacity 0.5s;}
+.skill .inner .left.motion {-webkit-animation: opacity 0.5s;animation: opacity 0.5s;}
+.skill .inner .right .rightText.motion {-webkit-animation: opacity 0.5s;animation: opacity 0.5s;}
+@-webkit-keyframes color {
+    0% {color: transparent;}
+    100% {color: #222;}
+}
 @keyframes color {
     0% {color: transparent;}
     100% {color: #222;}
 }
 
-.skill .inner .right .computer li:nth-child(1).motion span{animation-name:color; animation-duration: 0.3s;}
-.skill .inner .right .computer li:nth-child(2).motion span {animation-name:color; animation-duration: 0.4s;}
-.skill .inner .right .computer li:nth-child(3).motion span {animation-name:color; animation-duration: 0.5s;}
-.skill .inner .right .computer li:nth-child(4).motion span {animation-name:color; animation-duration: 0.6s;}
-.skill .inner .right .computer li:nth-child(5).motion span {animation-name:color; animation-duration: 0.7s;}
-.skill .inner .right .computer li:nth-child(6).motion span {animation-name:color; animation-duration: 0.8s;}
-.skill .inner .right .computer li:nth-child(7).motion span {animation-name:color; animation-duration: 0.9s;}
+.skill .inner .right .computer li:nth-child(1).motion span{-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.3s; animation-duration: 0.3s;}
+.skill .inner .right .computer li:nth-child(2).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.4s; animation-duration: 0.4s;}
+.skill .inner .right .computer li:nth-child(3).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.5s; animation-duration: 0.5s;}
+.skill .inner .right .computer li:nth-child(4).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.6s; animation-duration: 0.6s;}
+.skill .inner .right .computer li:nth-child(5).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.7s; animation-duration: 0.7s;}
+.skill .inner .right .computer li:nth-child(6).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.8s; animation-duration: 0.8s;}
+.skill .inner .right .computer li:nth-child(7).motion span {-webkit-animation-name:color;animation-name:color; -webkit-animation-duration: 0.9s; animation-duration: 0.9s;}
+
+
+
+@-webkit-keyframes slide-up {
+    0% {transform: translateY(-50px); opacity: 0;}
+    30% {transform: translateY(-50px);opacity: 0;}
+    70% {transform: translateY(-30px);opacity: 0.8;}
+}
 
 
 
@@ -133,7 +151,7 @@ body {font-size: 16px;}
 .info .inner .langText li {margin-top: 0;}
 
 .info .inner .langText li:hover {cursor: pointer;z-index: 100; }
-.info .inner .langText li:before {content: '';  background: rgba(175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0;}
+.info .inner .langText li:before {content: '';  background: rgba(z175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0;}
 
 .info .inner .langText li:hover:before, .info .inner .langText li:focus:before {width: 100%; opacity: 1; transition: all 0.2s; }
 
@@ -148,7 +166,7 @@ body {font-size: 16px;}
 .info .inner .eng.on {opacity: 1;}
 
 /* animation */
-.info.motion {animation: opacity 1s;}
+.info.motion {-webkit-animation: opacity 1s;animation: opacity 1s;}
 
 
 /* risk */
@@ -156,30 +174,36 @@ body {font-size: 16px;}
 .risk .inner {width: 80%; margin: 100px auto;}
 .risk .inner .text {text-align: center; font-size: 100px; font-weight: 400; -webkit-text-stroke: #707070 1px; color: transparent; line-height: 1; font-style: oblique; letter-spacing: -1; margin-top: 200px; z-index: 20;}
 .risk .inner ul {width: 100%;  display: flex; justify-content: space-between;}
-.risk .inner ul li {width: 18%;}
+.risk .inner ul li {width: 20%;}
 .risk .inner ul li img {width: 100%;}
 .risk .inner ul li:nth-child(1){margin-top: -200px; margin-right: 50px;}
-.risk .inner ul li:nth-child(2) {margin-top: 130px;}
-.risk .inner ul li:nth-child(3) {margin-left: 200px; margin-top: 50px;}
-.risk .inner ul li:nth-child(4) {margin-top: -300px;}
+.risk .inner ul li:nth-child(2) {margin-top: 30px; width: 30%;}
+.risk .inner ul li:nth-child(3) {margin-left: 50px; margin-top: 50px;}
+.risk .inner ul li:nth-child(4) {margin-top: 200px; width: 20%; margin-right: -50px;}
 
 /* animation */
 .risk .inner .text.motion .char {
-    animation: maintextAni 0.3s both;
-    animation-delay: calc(0.01s*var(--char-index));
+    -webkit-animation: maintextAni 0.3s both;
+            animation: maintextAni 0.3s both;
+    -webkit-animation-delay: calc(0.01s*var(--char-index));
+            animation-delay: calc(0.01s*var(--char-index));
 }
 
 .risk .inner ul li:nth-child(1).motion {
-    animation: slideup 0.3s;
+    -webkit-animation: slideup 0.3s;
+            animation: slideup 0.3s;
 }
 .risk .inner ul li:nth-child(2).motion {
-    animation: slideup  0.5s;
+    -webkit-animation: slideup  0.5s;
+            animation: slideup  0.5s;
 }
 .risk .inner ul li:nth-child(3).motion {
-    animation: slideup  0.7s;
+    -webkit-animation: slideup  0.7s;
+            animation: slideup  0.7s;
 }
 .risk .inner ul li:nth-child(4).motion {
-    animation: slideup  0.9s;
+    -webkit-animation: slideup  0.9s;
+            animation: slideup  0.9s;
 }
 
 
@@ -216,13 +240,19 @@ body {font-size: 16px;}
 .story .inner .books .contents .side .Chapter {transform: rotate(90deg); font-weight: bold;}
 .story .inner .books .contents .text {width: 90%; height: 600px; background:#6FA6D4; border: 1px solid #222; opacity: 0; transition: opacity 0.2s; transition-delay: 0.2s;}
 .story .inner .books li.on .contents .text {opacity: 1;transition: opacity 0.2s; }
-.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; object-fit: cover; align-items: center;}
+.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; -o-object-fit: cover; object-fit: cover; align-items: center;}
 .story .inner .books .contents .text .kor {font-size: 10px; margin-bottom: 20px; width: 82%; margin: 0 auto;}
 .story .inner .books .contents .text .eng {font-size: 12px; width: 82%; margin: 0 auto; }
 
 
 /* animation */
-.story {animation: opacity 1s;}
+.story {-webkit-animation: opacity 1s;animation: opacity 1s;}
+
+
+@-webkit-keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
 
 @keyframes opacity {
@@ -230,10 +260,22 @@ body {font-size: 16px;}
     100% {opacity: 1;}
 }
 
+@-webkit-keyframes slideup {
+    0% {opacity: 0; transform: translateY(50px);}
+    30% {opacity: 0; transform: translateY(50px);}
+    50% {opacity: 0.5; transform: translateY(50px);}
+}
+
 @keyframes slideup {
     0% {opacity: 0; transform: translateY(50px);}
     30% {opacity: 0; transform: translateY(50px);}
     50% {opacity: 0.5; transform: translateY(50px);}
+}
+
+@-webkit-keyframes maintextAni{ 
+    0%{opacity: 0; transform: translateY(-300px);}
+    30%{opacity: 0; transform: translateY(-300px);}
+    70%{opacity: 1; transform: translateY(-100px);}
 }
 
 @keyframes maintextAni{ 
