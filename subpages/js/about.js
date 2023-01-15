@@ -23,7 +23,7 @@ $(function(){
 });
 
 
-/* $(function(){
+$(function(){
     $(".info .inner .korClick").on('click', function(){
         $(".kor").addClass("on");
         $(".eng").removeClass("on");
@@ -49,7 +49,7 @@ $(document).ready(function(){
     });
     });
 
-    $(".books li").hover(function(){
+/*     $(".books li").hover(function(){
         $(this).addClass("on").siblings().removeClass("on");
 
             if($(this).hasClass("list1") === true) {
