@@ -64,8 +64,8 @@ body {font-size: 16px;}
 .clonecording .inner .contents li p.img {width: 100%; overflow: hidden; position: relative;}
 .clonecording .inner .contents li p.img img {width: 100%;}
 
-.clonecording .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size: 1.8vw;}
-.clonecording .inner .contents li p.txt span {font-size: 1vw;}
+.clonecording .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size:2vw;}
+.clonecording .inner .contents li p.txt span {font-size: 1.5vw;}
 .clonecording .inner .contents li:nth-child(2n){margin-left: 50px;}
 
 .clonecording .inner .contents li:hover p.img img {transform: scale(1.1); transition: all 0.2s;}
@@ -84,7 +84,7 @@ body {font-size: 16px;}
 .renewal .inner .left .button:hover {color: #222; background:#eee; transition: all 0.2s; margin-bottom: 300px;}
 
 
-.renewal .inner .right {width: 60%; float: right; margin-bottom: 500px; background: red; }
+.renewal .inner .right {width: 60%; float: right; margin-bottom: 500px; }
 
 .renewal .inner .right .site {width: 100%; position: relative;}
 .renewal .inner .right .site p.img {width: 100%; position: absolute; top: 30vh; left:0; margin-bottom: 300px; }
@@ -150,6 +150,7 @@ body {font-size: 16px;}
     .fix  {font-size: 0.9rem;}
     .fix .bottom {display: none;}
     .fix .top .menu .gnb li{font-size: 1.1rem;}
+    .title {font-size: 3rem; margin-right: -50px;}
     .main .inner .cc {display: none;}
     .main .inner .tit {margin-top: 10vh;}
     .clonecording {margin: 20px auto;}
