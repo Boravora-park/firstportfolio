@@ -39,9 +39,9 @@ body {font-size: 16px;}
 
 .wrap {width: 100%; position: relative; color: #656565;}
 
-.title.hel {display: block; float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 40%; right: 0; margin-right: -100px; z-index: -1; opacity: 1;}
-.title.hel.on {opacity: 1;}
-
+.title {display: block; float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 40%; right: 0; margin-right: -100px; z-index: -1; opacity: 1; }
+.title.on {opacity: 1;}
+.main.active .title.on {opacity: 1;}
 /* main */
 .main {width: 100%; overflow: hidden;}
 .main .inner {width: 95%; margin: 0 auto; position: relative;}
@@ -251,10 +251,11 @@ body {font-size: 16px;}
 }
 @media screen and (max-width: 600px) {
     .concept {margin-top: 530px;}
+    .concept .txt {font-size: 1rem;}
     .concept .tit {font-size: 2.5rem;}
     .concept .inner .color .left {width: 100%;}
     .concept .inner .color .left .main {width: 80%; margin: 0 auto; }
-
+   
     .main {overflow: visible;}
     .main .inner ul li.a {display: none;}
     .main .inner ul li.b {display: none;}
@@ -287,10 +288,10 @@ body {font-size: 16px;}
 }
 @media screen and (max-width: 400px) {
     br.mo {display: none;}
-    .concept {margin-top: 300px;}
+    .concept {margin-top: 350px;}
     .main .inner ul li.m {display: none;}
     .main .inner ul li.j {display: none;}
-    .main .inner ul li.d {top: 273%;}
+    .main .inner ul li.d {top:300%;}
     .concept .inner .color .left .main {width: 81%; }
     .concept .inner .color .left .main li {margin: 0;}
     .concept .inner .color .left .main li span {width: 70px; height: 70px; line-height: 70px;}
