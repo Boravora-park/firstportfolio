@@ -161,7 +161,14 @@ body {font-size: 16px;}
 .concept .inner .font p.txt {width: 100%; display: inline-block; }
 
 
+/* Process */
+.process{width: 100%; overflow: hidden; margin-bottom: 200px;}
+.process .tit {width: 100%; text-align: center; margin: 50px auto; font-size: 3rem;}
+.process .subTit {width: 100%; text-align: center; margin: 20px auto 50px;}
+.process .frame {width: 100%; margin: 0 auto; display: flex; justify-content: space-between;}
+.process .frame p.img {width: 20%; float: left; margin: 0 auto; margin-left: 20px; } 
 
+.process .frame p.img img {width: 100%;}
 /* 공통 애니메이션 */
 @keyframes opacity {
     0% {opacity: 0;}
@@ -227,17 +234,27 @@ body {font-size: 16px;}
 
 }
 @media screen and (max-width: 800px) {
-    .concept {margin-top: -800px;}
+    .concept {margin-top: -600px;}
+    .concept .tit {font-size: 3rem;}
     .concept .inner .logo p.img {width: 100%; float: none; margin: 0; padding: 0; text-align: center;}
-    .concept .inner .logo p.img img {width: 50%;}
+    .concept .inner .logo p.img img {width: 40%;}
     .concept .inner .logo .txt {width: 100%;float: none; margin: 0; padding: 0; text-align: center; margin-top: 50px;}
-    .concept .inner .color .left .main {width: 81%}
-    .concept .inner .color .right .sub {width: 100%;}
+    .concept .inner .color .left {width: 100%;}
+    .concept .inner .color .left .main {width: 70%; display: flex; justify-content: space-between; margin: 0 auto; }
+    .concept .inner .color .left .main li:nth-child(1) {margin-left: 0;}
+    .concept .inner .color .right .subTit {width: 100%; overflow: hidden; }
+    .concept .inner .color .right .sub {width: 83%;}
     .concept .inner .font .style > div {width: 100%; margin: 0; margin-bottom: 50px;}
     .concept .inner .font .txt {margin-top: 0;}
+    .process .frame p.img {width: 18%;}
+    .process .subTit {font-size: 2rem;}
 }
 @media screen and (max-width: 600px) {
     .concept {margin-top: 500px;}
+    .concept .tit {font-size: 2.5rem;}
+    .concept .inner .color .left {width: 100%;}
+    .concept .inner .color .left .main {width: 80%; margin: 0 auto; }
+
     .main {overflow: visible;}
     .main .inner ul li.a {display: none;}
     .main .inner ul li.b {display: none;}
@@ -257,10 +274,8 @@ body {font-size: 16px;}
     svg {display: none;}
 
     .concept .tit {font-size: 2.5rem;}
-    
     .concept .inner .font .subTit {font-size: 25px;}
     .concept .inner .color .left {width: 100%;}
-    .concept .inner .color .left .main {width: 100%; margin-left: 20px;}
     .concept .inner .color .left .main li {margin-left: 0;}
     .concept .inner .color .left .main li >span {width: 90px; height: 90px; line-height: 90px;}
     .concept .inner .color .right .sub {width: 100%; margin-left: 10px;}
