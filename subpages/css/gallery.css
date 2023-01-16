@@ -98,9 +98,9 @@ body {font-size: 16px;}
 .ncs .inner .center .list {width: 250px; border: 1px #222 solid; padding: 50px; margin: 0 auto; font-size: 1.2rem; color: #222;}
 .ncs .inner .center .list li {margin-top: 20px; transition: all 0.2s; position: relative;}
 .ncs .inner .center .list li:nth-child(1){margin-top: 0;}
-.ncs .inner .center .list li:hover {color: #fff; transition: all 0.2s; font-weight: bold;}
-.ncs .inner .center .list li:after {content: '→'; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.2); width: 0; opacity: 0; transition: all 0.2s;}
-.ncs .inner .center .list li:hover:after{width: 100%; height: 130%; line-height: 2; opacity: 1; transition: all 0.2s;}
+.ncs .inner .center .list li:hover { color:transparent; transition: all 0.2s; font-weight: bold; z-index: 20; }
+.ncs .inner .center .list li:after {content: '→'; position: absolute; top: 0; left: 0; background: #ddd; width: 0; opacity: 0; transition: all 0.2s; z-index: -1; color: #fff;}
+.ncs .inner .center .list li:hover:after{width: 100%; height: 130%; line-height: 2; opacity: 1; transition: all 0.2s; z-index: -1;}
 
 
 
