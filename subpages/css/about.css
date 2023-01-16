@@ -151,9 +151,9 @@ body {font-size: 16px;}
 .info .inner .langText li {margin-top: 0;}
 
 .info .inner .langText li:hover {cursor: pointer;z-index: 100; }
-.info .inner .langText li:before {content: '';  background: rgba(z175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0;}
+.info .inner .langText li:before {content: '';  background: rgba(175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0;}
 
-.info .inner .langText li:hover:before, .info .inner .langText li:focus:before {width: 100%; opacity: 1; transition: all 0.2s; }
+.info .inner .langText li:hover:before, .info .inner .langText li:focus:before {width: 100%; opacity: 1; transition: all 0.2s;}
 
 .info .inner .bottomText {width: 100%; display: inline-block; text-align: center; margin-top: 50px; font-size: 30px; font-weight: 400; transition: all 0.2s;}
 .info .inner .bottomText.ko  {font-size: 15px; margin-top: 20px;}
