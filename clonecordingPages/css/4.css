@@ -127,7 +127,7 @@ body {font-size: 16px;}
 @media screen and (max-width:520px){
     .main {margin-bottom: 130px;}
     .main .text .num {font-size: 4.3rem; top: -14px; left: -18%;}
-    .main .text .tit {font-size: 3rem; }
+    .main .text .tit {font-size: 3rem; margin-top: 300px; }
     .main .text .txt {font-size: 13px;}
     .main .text .list li {font-size: 11px; }
     .ex .inner .mySwiper .swiper-button-next {margin-right: -10px; margin-top: -70px;}
