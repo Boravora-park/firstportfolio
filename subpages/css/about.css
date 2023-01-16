@@ -240,7 +240,7 @@ body {font-size: 16px;}
 .story .inner .books .contents .side .Chapter {transform: rotate(90deg); font-weight: bold;}
 .story .inner .books .contents .text {width: 90%; height: 600px; background:#6FA6D4; border: 1px solid #222; opacity: 0; transition: opacity 0.2s; transition-delay: 0.2s;}
 .story .inner .books li.on .contents .text {opacity: 1;transition: opacity 0.2s; }
-.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; -o-object-fit: cover; object-fit: cover; align-items: center;}
+.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; -o-object-fit: cover; object-fit: cover; align-items: center; }
 .story .inner .books .contents .text .kor {font-size: 10px; margin-bottom: 20px; width: 82%; margin: 0 auto;}
 .story .inner .books .contents .text .eng {font-size: 12px; width: 82%; margin: 0 auto; }
 
@@ -287,6 +287,7 @@ body {font-size: 16px;}
 
 @media screen and (max-width: 1800px){
     .story .inner {width: 100%;}
+    .story .inner .leftText {font-size: 14px; left: 10%;}
     .risk .inner ul li:nth-child(4){margin-top: -110px;}
     .risk .inner ul li {width: 15%;}
 
@@ -412,4 +413,5 @@ body {font-size: 16px;}
     .story .inner .books li:nth-child(2) .contents .side .tit2 {margin-left: -62px; }
     .story .inner .books li:nth-child(5) .contents .side .tit2 {margin-left: -62px;}
     .story .inner .books li:nth-child(5) .contents .side .tit2 {margin-left: -62px;}
+}
 }
