@@ -213,7 +213,7 @@ body {font-size: 16px;}
 .story {width: 100%; overflow: hidden;}
 .story .inner {width: 80%; margin: 150px auto ; position: relative;}
 .story .inner .shelf {align-items: center; width: 1920px; height: 550px; border-left: 1px solid #222; border-bottom: 1px solid #222; display: block; position: absolute; top: 20.6%; left: 25%;}
-.story .inner .leftText {position: absolute; bottom:120px; left: 3%; text-align: right; font-weight: bold; font-size: 20px;}
+.story .inner .leftText {position: absolute; bottom:120px; left: 5%; text-align: right; font-weight: bold; font-size: 20px;}
 .story .inner .title {font-size: 60px; opacity: 1; width: 100%;text-align: center; display: inline-block; font-weight: 600;}
 .story .inner .title .num {font-size: 20px; margin-right: 20px; font-weight: lighter; }
 .story .inner .books {width: 50%; height: 620px; margin-left: 450px; display: flex; margin-top: 20px;}
@@ -295,7 +295,7 @@ body {font-size: 16px;}
 @media screen and (max-width: 1440px){
     br.mo {display: none;}
 
-    .story .inner {width: 100%;}
+    .story .inner {width: 80%;}
     .story .inner .leftText {display: none;}
     .story .inner .shelf {left: 10%;}
     .story .inner .books {width: 46rem; margin-left: 200px;}
@@ -313,7 +313,9 @@ body {font-size: 16px;}
     .risk .inner ul li:nth-child(1){margin-top: -300px;}
     .risk .inner ul li:nth-child(2){margin-top: 20px;}
     .risk .inner ul li:nth-child(4) {margin-top: -290px;}
-    .story .inner .books {margin-left: 110px;}
+    .story .inner {width: 100%;}
+    .story .inner .books {margin-left: 90px;}
+    .story .inner .leftText {display: none;}
     .story .inner .books .contents .text .kor {width: 80%; margin: 0 auto;}
     .story .inner .books .contents .text .eng {width: 80%; margin: 10px auto;}
 
