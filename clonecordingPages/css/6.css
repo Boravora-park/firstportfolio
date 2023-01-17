@@ -48,7 +48,7 @@ body {font-size: 16px;}
 
 
 .main .text .tit {width: 100%; text-align: center; margin: 400px 0 0; font-size: 6rem; font-weight: 500; color: #ddd;}
-.main .text .list {margin: 10px auto; margin-left: 70%;}
+.main .text .list {margin: 10px auto; margin-left: 77%;}
 .main .text .list li:hover {background: #fff; color: #222;}
 
 .main .text .list li {float: left; margin-left: 5px; padding: 3px 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 0.5rem; font-size: 0.9rem; }
@@ -84,17 +84,17 @@ body {font-size: 16px;}
 /* responsive */
 
 @media screen and (max-width:1440px){
-    .main .text .list {margin-left: 68%;}
-    .main .text .txt {margin-right: 17%;}
+    .main .text .list {margin-left: 93%;}
+    .main .text .txt {margin-right: 3%;}
 
     .ex .inner .mySwiper .swiper-button-next {margin-right: 30px;}
     .ex .inner .mySwiper .swiper-button-prev {margin-left: 20px;}
 }
 @media screen and (max-width:1200px){
-    .main .text .list {margin-left: 60%;}
+    .main .text .list {margin-left: 95%;}
     .main .text .num {font-size: 7rem;}
-    .main .text .tit {font-size: 5rem;}
-    .main .text .txt {margin-right: 20%;}
+    .main .text .tit {font-size: 4rem;margin-left: 7%;}
+    .main .text .txt {margin-right: 0%;}
 }
 @media screen and (max-width:900px){
     .main .text .num {font-size: 6rem;}
