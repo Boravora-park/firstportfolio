@@ -60,7 +60,7 @@ body {font-size: 16px;}
 .clonecording {width: 100%; overflow: hidden; margin: 100px auto;}
 .clonecording .inner {width: 80%; margin: 0 auto;}
 .clonecording .inner .contents {width: 100%; margin: 0 auto; color: #222; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between;}
-.clonecording .inner .contents li {width: 48%; float: left; text-align: right; margin-bottom: 50px;  transition: all 0.2s;}
+.clonecording .inner .contents li {width: 45%; float: left; text-align: right; margin-bottom: 50px;  transition: all 0.2s;}
 .clonecording .inner .contents li p.img {width: 100%; overflow: hidden; position: relative;}
 .clonecording .inner .contents li p.img img {width: 100%;}
 
@@ -123,7 +123,7 @@ body {font-size: 16px;}
 }
 
 @media screen and (max-width: 1440px) {
-
+    .clonecording .inner {width: 90%;}
     .renewal .inner .left .txt {margin-top: 54vh; font-size: 3vh;}
     .renewal .inner .right .site p.img {top: 42vh;}
     .renewal .inner {width: 98%;}
@@ -136,7 +136,7 @@ body {font-size: 16px;}
 @media screen and (max-width: 1024px){
     .renewal .inner .left {width: 100%; float: none;}
     .renewal .inner .left .txt {margin-top: 16vh;}
-    .renewal .inner .right {width: 100%; float: none; margin-top: -320px;}
+    .renewal .inner .right {width: 100%; float: none; margin-top: -278px;}
     .title {font-size: 4rem; margin-right: -70px;}
 
 }
@@ -148,6 +148,7 @@ body {font-size: 16px;}
 }
 
 @media screen and (max-width: 560px){
+    br.mo {display: none;}
 
     .title {font-size: 3rem; margin-right: -50px;}
     .main .inner .cc {display: none;}
@@ -158,6 +159,7 @@ body {font-size: 16px;}
     .clonecording .inner .contents li:nth-child(2n) {margin-left: 0;}
     .clonecording .inner .contents li p.txt {font-size: 3.8vw}
     .renewal .inner .left .button {font-size: 13px;}
+    .ncs .inner .tit {font-size: 2rem;}
 }
 @media screen and (max-width: 560px){
     .title {display: none;}
