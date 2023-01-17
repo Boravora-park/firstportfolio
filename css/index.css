@@ -82,7 +82,7 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 .visual .inner .name .park {font-size: 16rem; letter-spacing: 1px;}
 .visual .inner .title {text-align: center; position: relative; margin-top: -30px;}
 .visual .inner .title .port {font-size: 2.2rem; font-style:italic;}
-.visual .inner .title .circle {position: absolute; top: -10px; -webkit-animation-name: circle; animation-name: circle; -webkit-animation-duration: 1.5s; animation-duration: 1.5s;}
+.visual .inner .title .circle {position: absolute; top: -10px; animation-name: circle; animation-duration: 1.5s;}
 
 
 
@@ -95,21 +95,11 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 .visual .inner .textBox .center p.img img {width: 100%;}
 
 /* animation */
-@-webkit-keyframes circle{
-    0% {stroke-dashoffset:1847; opacity: 0;}
-    100% {stroke-dashoffset:0;}
-}
 @keyframes circle{
     0% {stroke-dashoffset:1847; opacity: 0;}
     100% {stroke-dashoffset:0;}
 }
-.visual .inner .title .circle path {fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 1847; stroke-dashoffset: 0; -webkit-animation-name: circle; animation-name: circle; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
-
-@-webkit-keyframes maintextAni{ 
-    0%{opacity: 0; transform: translateY(-300px);}
-    30%{opacity: 0; transform: translateY(-300px);}
-    70%{opacity: 1; transform: translateY(-100px);}
-}
+.visual .inner .title .circle path {fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 1847; stroke-dashoffset: 0; animation-name: circle; animation-duration: 2s; animation-iteration-count: infinite;}
 
 @keyframes maintextAni{ 
     0%{opacity: 0; transform: translateY(-300px);}
@@ -117,34 +107,21 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
     70%{opacity: 1; transform: translateY(-100px);}
 }
 .visual .inner .name.motion .char{
-    -webkit-animation: maintextAni 0.5s both;
-            animation: maintextAni 0.5s both;
-    -webkit-animation-delay: calc(0.08s*var(--char-index));
-            animation-delay: calc(0.08s*var(--char-index));
+    animation: maintextAni 0.5s both;
+    animation-delay: calc(0.08s*var(--char-index));
 }
 .visual .inner .title .port.motion .char{
-    -webkit-animation: maintextAni 0.5s both;
-            animation: maintextAni 0.5s both;
-    -webkit-animation-delay: calc(0.08s*var(--word-index));
-            animation-delay: calc(0.08s*var(--word-index));
+    animation: maintextAni 0.5s both;
+    animation-delay: calc(0.08s*var(--word-index));
 }
 
 .visual .inner .textBox .left.motion .char {
-    -webkit-animation: maintextAni 0.3s both;
-            animation: maintextAni 0.3s both;
-    -webkit-animation-delay: calc(0.05s*var(--word-index));
-            animation-delay: calc(0.05s*var(--word-index));
+    animation: maintextAni 0.3s both;
+    animation-delay: calc(0.05s*var(--word-index));
 }
 .visual .inner .textBox .right.motion .char {
-    -webkit-animation: maintextAni 0.3s both;
-            animation: maintextAni 0.3s both;
-    -webkit-animation-delay: calc(0.05s*var(--word-index));
-            animation-delay: calc(0.05s*var(--word-index));
-}
-
-@-webkit-keyframes house{
-    0% {stroke-dashoffset:2357; opacity: 0;}
-    100% {stroke-dashoffset:0;}
+    animation: maintextAni 0.3s both;
+    animation-delay: calc(0.05s*var(--word-index));
 }
 
 @keyframes house{
@@ -152,35 +129,24 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
     100% {stroke-dashoffset:0;}
 }
 
-.visual .inner .textBox .center .house path {fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 2357; stroke-dashoffset: 0; -webkit-animation-name: house; animation-name: house; -webkit-animation-duration: 3s; animation-duration: 3s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
-
-@-webkit-keyframes slideup {
-    0% {opacity: 0; transform: translateY(50px);}
-    30% {opacity: 0; transform: translateY(50px);}
-    50% {opacity: 0.5; transform: translateY(50px);}
-}
+.visual .inner .textBox .center .house path {fill: none; stroke: #222; stroke-width: 2; stroke-dasharray: 2357; stroke-dashoffset: 0; animation-name: house; animation-duration: 3s; animation-iteration-count: infinite;}
 
 @keyframes slideup {
     0% {opacity: 0; transform: translateY(50px);}
     30% {opacity: 0; transform: translateY(50px);}
     50% {opacity: 0.5; transform: translateY(50px);}
 }
-nav ul li.motion {-webkit-animation: slideup 0.2s;animation: slideup 0.2s;}
-nav ul li:nth-child(2){-webkit-animation-duration: 0.3s;animation-duration: 0.3s;}
-nav ul li:nth-child(3){-webkit-animation-duration: 0.4s;animation-duration: 0.4s;}
-nav ul li:nth-child(4){-webkit-animation-duration: 0.5s;animation-duration: 0.5s;}
-nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s;}
-
-@-webkit-keyframes opacity {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
+nav ul li.motion {animation: slideup 0.2s;}
+nav ul li:nth-child(2){animation-duration: 0.3s;}
+nav ul li:nth-child(3){animation-duration: 0.4s;}
+nav ul li:nth-child(4){animation-duration: 0.5s;}
+nav ul li:nth-child(5){animation-duration: 0.6s;}
 
 @keyframes opacity {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-.visual .inner .textBox .center p.img.motion {-webkit-animation: opacity 1s;animation: opacity 1s;}
+.visual .inner .textBox .center p.img.motion {animation: opacity 1s;}
 
 /* intro */
 .intro { width: 100%;  height: 4000px; /* background:#ddd; */}
@@ -201,20 +167,15 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
 /* animation */
 .intro .inner .imgBox .top.motion{
-    -webkit-animation: opacity 0.5s ease-in-out;
-            animation: opacity 0.5s ease-in-out;
+    animation: opacity 0.5s ease-in-out;
 }
 .intro .inner .imgBox .right.motion .char{
-    -webkit-animation: maintextAni 0.5s both;
-            animation: maintextAni 0.5s both;
-    -webkit-animation-delay: calc(0.03s*var(--word-index));
-            animation-delay: calc(0.03s*var(--word-index));
+    animation: maintextAni 0.5s both;
+    animation-delay: calc(0.03s*var(--word-index));
 }
 .intro .inner .imgBox .bottom.motion .char{
-    -webkit-animation: maintextAni 0.3s both;
-            animation: maintextAni 0.3s both;
-    -webkit-animation-delay: calc(0.02s*var(--word-index));
-            animation-delay: calc(0.02s*var(--word-index));
+    animation: maintextAni 0.3s both;
+    animation-delay: calc(0.02s*var(--word-index));
 }
 
 /* hobbies */
@@ -243,9 +204,7 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 .hobbies .inner .left .list li:nth-child(3) p.img {margin-top: -25px;}
 .hobbies .inner .left .list li:nth-child(4) p.img {margin-top: 40px;}
 .hobbies .inner .text {float: right; text-align: right; margin-right: 100px; font-size: 25px;width: 40%; color: #666; line-height: 1.1; margin-top: 30px;}
-.hobbies .inner .text .hel {color: #222; }
-
-.hobbies .inner .text .nw {font-weight: normal;}
+.hobbies .inner .text .hel {color: #222;}
 .hobbies .inner .text .nw > span {color: #222; transition: all 0.3s; display: inline-block; font-weight: 500; font-style: oblique;}
 .hobbies .inner .text .nw > span:hover{border-bottom: 1px solid #222; cursor: pointer; transition: all 0.2s;}
 
@@ -254,16 +213,13 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
 /* animation */
 .hobbies .inner .text.motion{
-    -webkit-animation: opacity 0.5s ease-in-out;
-            animation: opacity 0.5s ease-in-out;
+    animation: opacity 0.5s ease-in-out;
 }
 .hobbies .inner .left span.motion{
-    -webkit-animation: opacity 0.3s ease-in-out;
-            animation: opacity 0.3s ease-in-out;
+    animation: opacity 0.3s ease-in-out;
 }
 .hobbies .inner .left .list{
-    -webkit-animation: opacity 0.5s ease-in-out;
-            animation: opacity 0.5s ease-in-out;
+    animation: opacity 0.5s ease-in-out;
 }
 /* like */
 .like {width: 100%; overflow: hidden;}
@@ -281,10 +237,8 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
 /* animation */
 .like .inner .text.motion .char{
-    -webkit-animation: maintextAni 0.3s both;
-            animation: maintextAni 0.3s both;
-    -webkit-animation-delay: calc(0.02s*var(--word-index));
-            animation-delay: calc(0.02s*var(--word-index));
+    animation: maintextAni 0.3s both;
+    animation-delay: calc(0.02s*var(--word-index));
 }
 
 
@@ -319,10 +273,7 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 .end{width: 100%; overflow: hidden;}
 
 @media screen and (max-width: 1770px) {
-    .visual .inner .name {margin-top: 5%;}
-    .visual .inner .name .bora {font-size: 15rem; letter-spacing: -10px;}
-    .visual .inner .name .park {font-size: 14rem; letter-spacing: 1px;}
-    .visual .inner .textBox .center p.img img {width: 90%;}
+    .visual .inner .name {margin-top: 10%;}
     .visual .inner .textBox {width: 80%; margin-top: 13%;}
     .hobbies .inner .left .list li .tit {margin-top: 0px; margin-left: -15px;}
     .hobbies .inner .left .list li:nth-child(1) p.img {margin-top: 100px; margin-left: 50px;}
@@ -339,13 +290,14 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
 }
 @media screen and (max-width: 1440px) {
-    .visual .inner {margin-top: 200px;}
+    .visual .inner {margin-top: 150px;}
     .visual .inner .textBox {width: 85%; font-size: 0.9rem; text-align:center;}
-    .visual .inner .textBox .center p.img {top: -82px;}
+    .visual .inner .textBox .center p.img {top: -82px; left: 20%;}
     .visual .inner .textBox .center p.img img {width: 85%;}
     .visual .inner .name .bora {font-size: 13rem}
     .visual .inner .name .park {font-size: 14rem; letter-spacing: -14px;}
-
+    .visual .inner .title .port {font-size: 2rem;}
+    .visual .inner .textBox svg {width: 95%;}
     .intro {height: 3500px;}
     .intro .inner .imgBox .top .nw {font-size: 1.3rem;}
     .intro .inner .imgBox .bottom {bottom: -883px;}
@@ -354,8 +306,8 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
     .intro .inner .imgBox .bottom {font-size: 1.3rem; bottom: -822px;}
     .hobbies {margin-bottom: 200px;}
-    .hobbies .inner {width: 92%;}
-    .hobbies .inner .left {margin-left: 10px;}
+    .hobbies .inner {width: 96%;}
+    .hobbies .inner .left {margin-left: 10px; width: 43%;}
     .hobbies .inner .left span {width: 350px; height: 350px;}
     .hobbies .inner .left .list li .tit {font-size: 2.7rem;}
     .hobbies .inner .left .list li p.img {margin: 0;}
@@ -368,8 +320,10 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .like .inner .text {font-size: 2.5rem;}
     .like .inner ul {top: -200px;}
     .like .inner ul li {width: 50%;}
-
+    .portfolio .inner .innerTop .top .tit {font-size: 3rem;}
     .portfolio .inner .innerTop .top .tit img {margin:0 30px;}
+    .portfolio .inner .innerTop .top .left {margin-top: 15px;}
+    .portfolio .inner .innerTop .top .right {margin-top: 10px;}
     .portfolio .inner .cording li a img  {width: 76%;}    
     .portfolio .inner .cording li:nth-child(2) a img  {width: 90%; text-align: left;}
     .portfolio .inner .cording li:nth-child(3) a img  {width: 30%;}
@@ -385,6 +339,7 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .visual .inner .name {width: 100%; display: inline-block;}
     .visual .inner .name .bora {width: 100%;}
     .visual .inner .name .park {width: 100%;}
+    .visual .inner .textBox .center p.img {left: 30%;}
     .visual .inner .textBox {display: block; margin-top:9%;}
     .visual .inner .textBox .left {margin-bottom: 70px;}
     .visual .inner .textBox .right {margin-top: 120px;}
@@ -396,10 +351,10 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .hobbies .inner .left .list li p.img {width: 50%;}
     .hobbies .inner .text {margin: 0; font-size: 1.3rem; width: 100%; padding-right: 100px; box-sizing: border-box;}
 
-    .portfolio .inner .innerTop .top { padding:0; text-align: center;}
+    .portfolio .inner .innerTop .top {padding: 7px 26px; text-align: center;}
     .portfolio .inner .innerTop .top .tit {font-size:3rem; margin-top: 30px;text-align: center; padding: 0;}
-    .portfolio .inner .innerTop .top .left {font-size: 0.9rem;}
-    .portfolio .inner .innerTop .top .right {font-size: 0.9rem; text-align: left;}
+    .portfolio .inner .innerTop .top .left {font-size: 0.9rem; margin-top: 44px;}
+    .portfolio .inner .innerTop .top .right {font-size: 0.9rem; text-align: left; margin-top: 44px;}
     .portfolio .inner .innerTop .contents {font-size: 1.1rem;}
     .portfolio .inner .cording {margin-left: 63px;}
 
@@ -415,7 +370,8 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .visual .inner .title .port {font-size: 1.6rem; margin-top: 50px; }
     .visual .inner .title .circle {display: none;}
     .visual .inner .house {width: 90%;}
-
+    .visual .inner .textBox .center p.img {left: 20%;}
+    .visual .inner .textBox .center p.img img {width: 75%;}
     .intro .inner .imgBox {width: 80%;}
     .intro .inner .imgBox .top {margin-top: 500px; display: block; left: 0;}
     .intro .inner .imgBox .top .nw { font-size: 1.1rem; line-height: 0.9; display: block; line-height: 1.1;}
@@ -490,4 +446,3 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
         .portfolio .inner .cording li a img {width: 60%;}
     }
 
-}
