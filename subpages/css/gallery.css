@@ -45,8 +45,8 @@ body {font-size: 16px;}
 /* main */
 .main {width: 100%; overflow: hidden;}
 .main .inner {width: 95%; margin: 0 auto;}
-.main .inner .tit {width: 98%; margin: 0 auto; margin-top: 64vh; font-size: 7vw; font-style: italic; font-weight: 600; margin-bottom: 50px; color: #222;}
-.main .inner .cc {width:100%; font-size: 2vw; color: #222; margin-right: 50%;}
+.main .inner .tit {width: 98%; margin: 0 auto; margin-top: 70vh; font-size: 5vw; font-style: italic; font-weight: 600; margin-bottom: 40px; color: #222;}
+.main .inner .cc {width:100%; font-size: 1.8vw; color: #222; margin-right: 50%;}
 .main .inner .cc li {width: 25%; margin-left: 30px; margin-bottom: 10px; float: left;}
 .main .inner .cc li:nth-child(2) {margin-left: 60px;}
 .main .inner .cc li:nth-child(5) {margin-left: 60px;}
@@ -58,26 +58,26 @@ body {font-size: 16px;}
 
 /* clonecording */
 .clonecording {width: 100%; overflow: hidden; margin: 100px auto;}
-.clonecording .inner {width: 98%; margin: 0 auto;}
-.clonecording .inner .contents {width: 100%; margin-left: 5%; color: #222;}
-.clonecording .inner .contents li {width: 44%; float: left; text-align: right; margin-bottom: 50px; font-size: 2vw;  transition: all 0.2s;}
+.clonecording .inner {width: 80%; margin: 0 auto;}
+.clonecording .inner .contents {width: 100%; margin: 0 auto; color: #222; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.clonecording .inner .contents li {width: 48%; float: left; text-align: right; margin-bottom: 50px;  transition: all 0.2s;}
 .clonecording .inner .contents li p.img {width: 100%; overflow: hidden; position: relative;}
 .clonecording .inner .contents li p.img img {width: 100%;}
 
-.clonecording .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size:2vw;}
-.clonecording .inner .contents li p.txt span {font-size: 1.5vw;}
+.clonecording .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size:1.7vw;}
+.clonecording .inner .contents li p.txt span {font-size: 1.3vw;}
 .clonecording .inner .contents li:nth-child(2n){margin-left: 50px;}
 
 .clonecording .inner .contents li:hover p.img img {transform: scale(1.1); transition: all 0.2s;}
-.clonecording .inner .contents li p.img:after {position: absolute; content: ''; width: 100%; height: 100%; background: rgba(0,0,0,0.1); top: 0; left: 0; opacity: 0; transition: all 0.2s;}
+/* .clonecording .inner .contents li p.img:after {position: absolute; content: ''; width: 100%; height: 100%; background: rgba(0,0,0,0.1); top: 0; left: 0; opacity: 0; transition: all 0.2s;} */
 .clonecording .inner .contents li:hover p.img:after {width: 100%; height: 100%; opacity: 1; transition: all 0.2s;}
 .clonecording .inner .contents li:hover p.txt {font-weight: 600; color: #222; font-style: italic;}
 
 /* site renewal */
 .renewal {width: 100%; height: 110vh; overflow: hidden; color: #ccc;}
-.renewal .inner {width: 80%; margin: 0 auto;}
+.renewal .inner {width: 80%; margin: 0 auto; }
 .renewal .inner .left {width: 40%; float: left;  text-align: center;}
-.renewal .inner .left .txt {margin-top: 45vh; font-size:3vw; letter-spacing: 2px; margin-bottom: 20px;} 
+.renewal .inner .left .txt {margin-top: 45vh; font-size:3vw; letter-spacing: 1px; margin-bottom: 20px;} 
 
 .renewal .inner .left .tit{font-size: 1.5vw; font-style: oblique;} 
 .renewal .inner .left .button {display: inline-block; margin-top: 20px; border: 1px solid #656565; padding: 8px 18px; border-radius: 50px; transition: all 0.2s;}
@@ -123,8 +123,12 @@ body {font-size: 16px;}
 }
 
 @media screen and (max-width: 1440px) {
-    .renewal .inner .left .txt {margin-top: 54vh; font-size: 4vh;}
+
+    .renewal .inner .left .txt {margin-top: 54vh; font-size: 3vh;}
     .renewal .inner .right .site p.img {top: 42vh;}
+    .renewal .inner {width: 98%;}
+    .renewal .inner .left {width: 32%;}
+    .renewal .inner .right {width: 62%; float: left;}
     .ncs .inner .txt {font-size: 1rem;}
     .title {margin-right: -80px;}
 
@@ -132,27 +136,22 @@ body {font-size: 16px;}
 @media screen and (max-width: 1024px){
     .renewal .inner .left {width: 100%; float: none;}
     .renewal .inner .left .txt {margin-top: 16vh;}
-    .renewal .inner .right {width: 100%; float: none; margin-top: -200px;}
+    .renewal .inner .right {width: 100%; float: none; margin-top: -320px;}
     .title {font-size: 4rem; margin-right: -70px;}
 
 }
 @media screen and (max-width: 820px){
-    .fix .top .menu .gnb {font-size: 2rem;}
-    nav ul {width: 90%; margin: 0 auto; }
-    nav ul li {font-size: 1rem;}
+    .main .inner .tit {font-size: 8vw;}
     .ncs .inner .center .list {font-size: 1rem; padding: 20px;}
-
+    .main .inner .cc {font-size: 2.4vw;}
+    .main .inner .cc li {margin-left: 0;}
 }
 
 @media screen and (max-width: 560px){
-    .page {display: none;}
-    br.mo {display: none;}
-    .fix  {font-size: 0.9rem;}
-    .fix .bottom {display: none;}
-    .fix .top .menu .gnb li{font-size: 1.1rem;}
+
     .title {font-size: 3rem; margin-right: -50px;}
     .main .inner .cc {display: none;}
-    .main .inner .tit {margin-top: 10vh;}
+    .main .inner .tit {margin-top: 10vh; }
     .clonecording {margin: 20px auto;}
     .clonecording .inner .contents {width: 98%;margin: 0 auto;}
     .clonecording .inner .contents li {width: 100%; float: none;}

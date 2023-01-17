@@ -116,8 +116,8 @@
         <section class="renewal bg" data-color="#222">
             <div class="inner">
                 <div class="left nw">
-                    <p class="txt">Web Site Renewal</p>
-                    <p class="tit">- Seohee Constraction -</p>
+                    <p class="txt nw">Web Site Renewal</p>
+                    <p class="tit hel">- Seohee Constraction -</p>
                     <p class="button hel"><a href="../clonecordingPages/renewal/index/index.html">view more</a></p>
                 </div>
                 <div class="right">
@@ -229,18 +229,19 @@
         </section>
     </div>
     <script>
+    //renewal
     gsap.registerPlugin(ScrollTrigger);
 
         gsap.defaults({ease:"power1", duration:3});
             const tl = gsap.timeline();
             tl.from(".img1",{yPercent:0});
-            tl.from(".img2",{yPercent:500});
+            tl.from(".img2",{yPercent:300});
     
             ScrollTrigger.create({
                 animation:tl,
-                trigger:".site p.img",
-                start:"top 50%",
-                end:"+=20",
+                trigger:/* ".site p.img" */".right",
+                start:"top top",
+                end:"+=500",
                 pin:".renewal",
                 scrub:true,
                 toggleClass:"active",
