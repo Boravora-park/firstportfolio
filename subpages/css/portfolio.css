@@ -47,7 +47,7 @@ body {font-size: 16px;}
 .main .inner {width: 95%; margin: 0 auto; position: relative;}
 
 .main .inner svg {width: 100%;  margin-top: -200px; margin-left: 400px; z-index: -1; }
-.main .inner svg path {fill: none; stroke: #656565; stroke-width: 2; stroke-dasharray: 11075; stroke-dashoffset: 0; animation-name: line; animation-duration: 3s; animation-iteration-count: infinite;}
+.main .inner svg path {fill: none; stroke: #656565; stroke-width: 2; stroke-dasharray: 11075; stroke-dashoffset: 0; animation-name: line; animation-duration: 5s; animation-iteration-count: infinite;}
 
 
 @keyframes line {
@@ -77,10 +77,7 @@ body {font-size: 16px;}
 .main .inner ul li.m {width: 28%;top: 26%; right: 23%;}
 
 .main .inner ul li img{width: 100%;}
-@keyframes line {
-    0% {stroke-dashoffset: 4706;}
-    100% {stroke-dashoffset: 0;}
-}
+
 
 /* concept */
 /* 공통 */
@@ -119,7 +116,7 @@ body {font-size: 16px;}
 .concept .inner .color .left .main li:nth-child(3) >span{background: #222222;}
 
 
-.concept .inner .color .right .sub {display: flex; flex-wrap: wrap; justify-content: space-between; width: 70%; margin: 0 auto;}
+.concept .inner .color .right .sub {display: flex; flex-wrap: wrap; justify-content: space-between; width: 80%; margin: 0 auto;}
 .concept .inner .color .right .sub span {width: 90px; height: 90px; display: block; margin-bottom: 10px; margin-left: 10px; line-height: 90px; text-transform: lowercase; text-align: center;border: 1px #222 solid; color: #000;}
 
 .concept .inner .color .right .sub li:nth-child(1) span {background: #296DA6;}
@@ -200,7 +197,7 @@ body {font-size: 16px;}
     .concept .inner .color .left {width: 100%; margin-left: 0; float: none; margin-bottom: 80px;}
     .concept .inner .color .left .main {width: 40%; margin: 0 auto;}
     .concept .inner .color .right {width: 100%;margin-right: 0; float: none;} 
-    .concept .inner .color .right .sub {width: 50%;}
+    .concept .inner .color .right .sub {width: 60%;}
 
     .main .inner p.tit {margin-left: 0;}
 }
@@ -222,7 +219,7 @@ body {font-size: 16px;}
     .concept {margin-top: -1000px;}
     .concept .inner .font .style {width: 100%;}
     .concept .inner .color .left .main {width: 60%;}
-    .concept .inner .color .right .sub {width: 80%;}
+    .concept .inner .color .right .sub {width: 76%;}
 }
 @media screen and (max-width: 800px) {
     .concept {margin-top: -600px;}
@@ -231,7 +228,7 @@ body {font-size: 16px;}
     .concept .inner .logo p.img img {width: 40%;}
     .concept .inner .logo .txt {width: 100%;float: none; margin: 0; padding: 0; text-align: center; margin-top: 50px;}
     .concept .inner .color .left .main {width: 70%;}
-    .concept .inner .color .right .sub {width: 90%;}
+    .concept .inner .color .right .sub {width: 65%;}
 
     .concept .inner .font .style > div {width: 100%; margin: 0; margin-bottom: 50px;}
     .concept .inner .font .txt {margin-top: 0;}
@@ -243,7 +240,7 @@ body {font-size: 16px;}
     .concept .txt {font-size: 1rem;}
     .concept .tit {font-size: 2.5rem;}
     .concept .inner .color .left .main {width: 60%;}
-    .concept .inner .color .right .sub {width: 100%;}
+    .concept .inner .color .right .sub {width: 70%;}
 
     .main {overflow: visible;}
     .main .inner ul li.a {display: none;}
@@ -282,4 +279,5 @@ body {font-size: 16px;}
     .main .inner ul li.d {top:300%;}
     .concept .inner .color .left .main {width: 100%; }
     .concept .inner .color .left .main li > span {width: 80px; height: 80px; line-height: 80px;}
+    .concept .inner .color .right .sub {width: 100%;}
 }
