@@ -294,7 +294,7 @@ body {font-size: 16px;}
 
 @media screen and (max-width: 1440px){
     br.mo {display: none;}
-
+    .story .inner .leftText {display: none;}
     .story .inner {width: 80%;}
     .story .inner .leftText {display: none;}
     .story .inner .shelf {left: 10%;}
@@ -315,7 +315,7 @@ body {font-size: 16px;}
     .risk .inner ul li:nth-child(4) {margin-top: -290px;}
     .story .inner {width: 100%;}
     .story .inner .books {margin-left: 90px;}
-    .story .inner .leftText {display: none;}
+
     .story .inner .books .contents .text .kor {width: 80%; margin: 0 auto;}
     .story .inner .books .contents .text .eng {width: 80%; margin: 10px auto;}
 
