@@ -75,7 +75,7 @@ nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transit
 
 /* footer */
 footer {width: 100%; overflow: hidden; color: #656565;}
-footer .innerFooter {width: 100%; margin-top: 100px;}
+footer .innerFooter {width: 100%; margin-top: 150px;}
 footer .innerFooter .logo {margin-top: 50px; margin-bottom: 50px; text-align: center;}
 footer .innerFooter nav {width: 95%; margin: 0 auto; margin-top: 60px;}
 footer .innerFooter nav ul {display: flex; justify-content: space-between;}
