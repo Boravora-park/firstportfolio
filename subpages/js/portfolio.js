@@ -10,10 +10,13 @@ $(window).resize(function(){
     var scrollTop = $(document).scrollTop();
     // console.log(scrollTop);
     if(scrollTop >= 0){
-        $("#title").addClass("active");
+        $("#title").addClass("on");
     }
-    if(scrollTop > fixedNum_third){
-        $("#title").removeClass("active");
+/*     if(scrollTop >= fixedNum_second){
+        $("#title").removeClass("on");
+    } */
+    if(scrollTop >= fixedNum_third){
+        $("#title").removeClass("on");
     }
 });
 }).resize();

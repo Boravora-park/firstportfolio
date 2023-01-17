@@ -39,9 +39,9 @@ body {font-size: 16px;}
 
 .wrap {width: 100%; position: relative; color: #656565;}
 
-.title {display: block; float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 40%; right: 0; margin-right: -100px; z-index: -1; opacity: 1; }
+.title {display: block; float: right; text-align: right; transform: rotate(90deg); font-size: 5rem; color: #222; position: fixed; top: 40%; right: 0; margin-right: -100px; z-index: 0; opacity: 0; }
 .title.on {opacity: 1;}
-.main.active .title.on {opacity: 1;}
+
 /* main */
 .main {width: 100%; overflow: hidden;}
 .main .inner {width: 95%; margin: 0 auto; position: relative;}
