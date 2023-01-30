@@ -1,0 +1,174 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,200;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700;1,6..72,800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'bahnschrift', sans-serif;
+    src: url('../fonts/bahnschrift.otf') format('otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Black_1.otf') format('otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'BodoniFLF-Italic';
+    src: url('../fonts/BodoniFLF-Italic.woff') format('woff');
+
+}
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+
+/* lay out */
+body {font-size: 16px;}
+.bahn {font-family: 'Bahnschrift', sans-serif; font-weight: lighter;}
+.nw {font-family: 'Newsreader',serif; font-weight: normal;}
+.hel {font-family: 'Helvetica';}
+.bo {font-family: 'BodoniFLF-Italic';}
+.ko {font-family: 'Noto Sans KR', sans-serif;}
+
+.wrap {width: 100%; position: relative; color: #656565;}
+
+.fix {width: 100%; position: fixed; z-index: 2000; font-size: 1.1rem; padding: 20px; padding-bottom: 0; box-sizing: border-box; display: block;}
+.fix .top {width: 100%; display: flex; justify-content: space-between; margin-top: 5px;}
+
+.fix .top .menu .menuOpen {text-align: right;}
+
+/* gnb */
+.fix .top .menu .gnb {opacity: 1; width: 30%; height: 90vh; font-size: 3em; position: absolute;  display: block; right: -1000%; text-align: center; transition: all 0.3s; margin-top: -20px; background-color: #6FA6D4; color: #fff; border: 1px solid #fff; overflow: hidden; }
+.fix .top .menu .gnb.on {right: 0;}
+.fix .top .menu .gnb li {font-weight: 400; color: #fff; transition: all 0.2s; display: inline-block; margin-bottom: 50px; display: block; position:relative;}
+
+
+.fix .top .menu .gnb li:nth-child(2){margin-top: 18vh;}
+.fix .top .menu .gnb li span.lnr{font-size: 30px; color: #fff; display: block; margin-top: 15px;}
+.fix .top .menu .gnb li:nth-child(1){border: none; display: block; width: 100%; height: 50px;}
+.fix .top .menu .gnb li::before {position: absolute; content: ''; bottom: 50%; left:30%; width: 0; height: 1px; background: #222; opacity: 0; }
+.fix .top .menu .gnb li:hover:before {width: 40%; opacity: 1;}
+.fix .top .menu .gnb li:nth-child(1):before {display: none;}
+.fix .top .menu .gnb li:hover {-webkit-text-stroke:#fff 1px; color: transparent; font-style: italic;}
+.fix .top .menu .gnb .close {font-size: 1.2rem; text-align: right; display: block; margin-right: 20px;}
+.fix .bottom {width: 100%; display: flex; justify-content: space-between; position: absolute; /* top: 1310%; */ margin-top: 85vh; left: 0%; padding: 20px; box-sizing: border-box;}
+.fix .bottom .copy {transform: rotate(270deg); transform-origin: left; margin-left: 10px;}
+
+nav {width: 95%; margin: 0 auto; margin-top: 40px;}
+nav ul {display: flex; justify-content: space-between; font-weight: 400;}
+nav ul li {font-size: 18px; position: relative;}
+nav ul li:before {content: '';  background: rgba(175, 255, 110, 0.5); position: absolute; width: 0%; height: 100%; top: 0; left: 0; transition: all 0.2s; opacity:0; cursor: pointer;}
+nav ul li:hover {z-index: 20;}
+nav ul li:hover:before, nav ul li:focus:before {width: 100%; opacity: 1; transition: all 0.2s; z-index: -1;}
+
+
+
+/* main */
+.main {width: 100%; overflow: hidden;  margin-bottom: 350px; }
+.main .text {width: 80%; margin: 0 auto; text-align: right;position: relative;}
+
+.main .text .num {position: absolute; font-size: 10rem; font-weight: 500; top: 0; left: -13%; color: #ddd; margin-left: -2.8%; }
+
+
+.main .text .tit {width: 100%; text-align: center; margin: 400px 0 0; font-size: 6rem; font-weight: 500; color: #ddd;}
+.main .text .list {margin: 10px auto; margin-left: 60%;}
+.main .text .list li:hover {background: #fff; color: #222;}
+
+.main .text .list li {float: left; margin-left: 5px; padding: 3px 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 0.5rem; font-size: 0.9rem; }
+
+.main .text .txt {margin: 60px auto; text-align: right;  margin-right:30%; }
+
+/* animation */
+.main .text .tit.motion .char{animation: maintextAni 0.3s both;animation-delay: calc(0.05s*var(--char-index));}
+.main .num.motion .char {animation: maintextAni 0.3s both; animation-delay: calc(0.05s*var(--char-index));}
+.main .text .list.motion {animation-name: opacity; animation-duration: 0.3s;}
+.main .text .txt.motion {animation-name: opacity; animation-duration: 0.3s;}
+/* ex */
+.ex {width: 100%; overflow: hidden;}
+.ex .inner {width: 70%; margin: 50px auto 0;} 
+.ex .inner .mySwiper {width: 100%; margin: 0 auto; text-align: center; overflow: hidden;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide {width: 100%; }
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide a {width: 80%;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide a img {transition: all 0.2s;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(1) a img{width: 70%; }
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) a img{width: 60%;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) a img{width: 20%;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide-active {opacity: 1;}
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide a .txt{font-size: 1.4rem; margin-top: 40px; width: 100%; color: #222;} 
+.ex .inner .mySwiper .swiper-button-next {color: #222; margin-right: 100px; margin-top: -100px;}
+.ex .inner .mySwiper .swiper-button-prev {color: #222; margin-left: 100px;  margin-top: -100px;}
+.ex .inner p.img {width: 60%; margin: 150px auto;}
+.ex .inner p.img > img {width: 100%;}
+
+/* animation */
+.ex .inner .mySwiper .swiper-wrapper .swiper-slide a img:hover {filter: grayscale(1); transition: all 0.2s; transform: scale(0.9);}
+
+
+
+
+/* responsive */
+
+@media screen and (max-width:1440px){
+    .main .text .list {margin-left: 68%;}
+    .main .text .txt {margin-right: 17%;}
+
+    .ex .inner .mySwiper .swiper-button-next {margin-right: 30px;}
+    .ex .inner .mySwiper .swiper-button-prev {margin-left: 20px;}
+}
+@media screen and (max-width:1200px){
+    .main .text .list {margin-left: 60%;}
+    .main .text .num {font-size: 7rem;}
+    .main .text .tit {font-size: 5rem;}
+    .main .text .txt {margin-right: 20%;}
+}
+@media screen and (max-width:900px){
+    .main .text .num {font-size: 6rem;}
+    .main .text .tit {font-size: 4rem; margin-left: 12%;}
+    .main .text .txt {margin-right: 5%;}
+    .ex .inner .mySwiper .swiper-button-next {margin-right: 0px;}
+    .ex .inner .mySwiper .swiper-button-prev {margin-left: 0px;}
+    .ex .inner .mySwiper .swiper-button-next, .ex .inner .mySwiper .swiper-button-prev {font-size: 1.5rem;}
+    .ex .inner .mySwiper .swiper-button-next:after{font-size: 1.8rem;}
+    .ex .inner .mySwiper .swiper-button-prev:after {font-size: 1.8rem;}
+}
+@media screen and (max-width:800px){    
+    .ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) a img {width: 40%;}
+    .ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) a img {width: 79%;}
+    .ex .inner .mySwiper .swiper-wrapper .swiper-slide:nth-child(1) a img {width: 80%;}
+    .ex .inner p.img {width: 80%;}
+
+}
+
+@media screen and (max-width:680px){
+    .main .text .num {left: -16%; top: -10px;}
+    .main .text .txt {margin-right: 0%;}
+    .main .text .tit {font-size: 4rem; margin-left: 13%;}
+    .main .text .list {float: right; margin-left: 0;}
+    .ex .inner .mySwiper .swiper-button-next, .ex .inner .mySwiper .swiper-button-prev {font-size: 1.5rem;}
+    .ex .inner .mySwiper .swiper-button-next:after{font-size: 1.5rem;}
+    .ex .inner .mySwiper .swiper-button-prev:after {font-size: 1.5rem;}
+    .ex .inner .mySwiper .swiper-wrapper .swiper-slide a .txt {font-size: 1rem;}
+
+}
+@media screen and (max-width:520px){
+
+    .main {margin-bottom: 130px;}
+    .main .text .num {font-size: 4.3rem; top: -14px; left: -18%;}
+    .main .text .tit {font-size: 3rem; margin-top: 300px; }
+    .main .text .txt {font-size: 13px;}
+    .main .text .list li {font-size: 11px; }
+    .ex .inner .mySwiper .swiper-button-next {margin-right: -10px; margin-top: -70px;}
+    .ex .inner .mySwiper .swiper-button-prev {margin-left: -15px;  margin-top: -70px;}
+    .ex .inner .mySwiper .swiper-button-next, .ex .inner .mySwiper .swiper-button-prev {font-size: 1rem;}
+    .ex .inner .mySwiper .swiper-button-next:after{font-size: 1rem;}
+    .ex .inner .mySwiper .swiper-button-prev:after {font-size: 1rem;}
+}
+
