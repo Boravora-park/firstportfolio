@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* Reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;} aa
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+
+/* layout */
+
+body {font-family: 'MonumentGrotesk', sans-serif; font-size: 0.85vw; line-height: 1.6;}
+.wrap {margin: 0 auto; position: relative; overflow: hidden; background: #151515;}
+.inner {width: 85%; margin: 0 auto;}
+
+/* header */
+header {padding: 60px 0 0; position: fixed; width: 100%; left: 0; top: 0; z-index: 100;}
+header .inner {display: flex; justify-content: space-between; position: absolute; left: 50%; transform: translateX(-50%); top: 60px; transition: top 0.8s;} 
+header .logo {width: 7%; min-width: 100px;}
+header .logo img {width: 100%;}
+header .inner .gnb {display: flex;}
+header .inner .gnb li {margin-left: 60px;}
+header .inner .gnb li a {display: block; position: relative; color: #fff; font-size: 1vw; }
+header .inner .gnb li a:after {position: absolute; content: ''; width: 0%; height: 2; background: #d1ed5d; position: absolute; left: -15%; top: 52%; transition: width 0.4s;}
+header .inner .gnb li a:hover:after, header .inner .gnb li a:focus:after {width: 130%;}
+
+/* header .inner.b */
+header .inner.b .logo {width: 4%; min-width: 60px; }
+header .inner.b .menu span {width: 35px; height: 2px; background: #fff; display:block; margin-bottom: 4px; }
+header .inner.b .menu span:nth-child(1) {margin-left: -6px;}
+
+/* visual */
+.visual {position: relative; padding: 200px 0 0; overflow: hidden;}
+.visual .inner {display: flex; justify-content: space-between; flex-wrap: wrap;}
+.visual .textBox:nth-child(1) {width: 67%;}
+.visual .textBox:nth-child(2) {width: 29%; margin-top: 16%;}
+.visual .textBox span {color: #fff; display: block; font-weight: 400; }
+.visual .textBox .title {font-size: 9vw; line-height: 1;}
+.visual .textBox .subTitle {font-size: 1.5vw; margin-bottom: 20px;}
+.visual .textBox .text {color: #d1ed5d;}
+.visual .aniBox {width: 10%; position: relative; margin-top: 50px;}
+.visual .aniBox img {position: absolute; width: 30%; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.visual .aniBox .spin img {position: static; width: 100%; animation: spin; animation-duration: 30s; animation-iteration-count: infinite; animation-timing-function: linear;}
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+/* 처음 한번만 visual 애니 */
+@keyframes opa {
+    0% {opacity: 0; transform: translateY(100px);}
+    30% {opacity: 0; transform: translateY(100px);}
+}
+.visual .textBox .title span:nth-child(1) {animation-name: opa; animation-duration: 1s;}
+.visual .textBox .title span:nth-child(2) {animation-name: opa; animation-duration: 2s;}
+.visual .textBox .title span:nth-child(3) {animation-name: opa; animation-duration: 3s;}
+
+header .inner .gnb {animation-name: opa; animation-duration: 3.1s;}
+.visual .textBox .subTitle {animation-name: opa; animation-duration: 3.2s;}
+.visual .textBox .text {animation-name: opa; animation-duration: 3.3s;}
+
+/* 0번 스크립트 작성 후 .visual에 active 클래스 확인 */
+/* header 이후 작성 */
+/* visual.active */
+.visual .textBox {transition: all 0.8s; opacity: 0; transform: translateY(-100px);}
+.visual.active .textBox {transition: all 0.8s; opacity: 1;transform: translateY(0);}
+/* portfoilo */
+.portfolio .list {display: flex; flex-wrap: nowrap; position: relative; overflow: hidden;}
+.portfolio .list li {flex-shrink:0 ! important ; width: 100vw; height: 100vh; position: relative;}
+/* flex-shrink => https://blogpack.tistory.com/863 */
+/* flex-shrink 속성은 'flex-wrap:nowrap'이어야 적용됨. 'flex-shrink'속성은 기본값이 '1'이기때문에 속성을 정의하지 않아도 자동으로 아이템이 축소되므로 반드시 'flex-shrink:0'선언해야함 */
+/* 
+- 1. 스크립트 작성
+- 수평스크롤이 잘되는지 확인 후 css 작성
+- 
+ */
+.portfolio .list li .imgBox {width: 70%; position: absolute; right: 10px; top: 50%; transform: translateY(-50%) scale(0); }
+.portfolio .list li .imgBox img {width: 100%;}
+
+/* list li마다 배경색이 달라서 변수로 var -- sub color 지정 */
+/* https://www.daleseo.com/css-variables/*/
+.portfolio .list li:nth-child(1){--sub-color:#ffca37}
+.portfolio .list li:nth-child(2){--sub-color:#850018}
+.portfolio .list li:nth-child(3){--sub-color:#fb7d8c}
+.portfolio .list li:nth-child(4){--sub-color:#019c63}
+.portfolio .list li:nth-child(5){--sub-color:#8dd0ff}
+.portfolio .list li:nth-child(6){--sub-color:#81d578}
+
+.portfolio .list li .textBox {color: #fff; position: absolute; left: 0; bottom: 20%; width: 100%; padding-left: 5%; box-sizing: border-box;}
+.portfolio .list li .textBox .title {font-size: 6vw; line-height: 1; font-weight: 400;}
+.portfolio .list li .textBox .title span {display: block; color: transparent; -webkit-text-stroke: 2px var(--sub-color);}
+.portfolio .list li .textBox .subTitle {font-size: 1.5vw; margin-bottom: 20px;display: block;}
+.portfolio .list li .textBox .text {font-size: 1vw; color: var(--sub-color); display: block; position: absolute; bottom: -48%; left: 0; padding-left: 20%;}
+
+footer{height: 100vh; color: #fff;}
+footer .inner {position: relative; height: 100%;}
+footer .textBox {width: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+footer .textBox .title {font-size: 7.5vw; line-height: 1; font-weight: 400; }
+footer .textBox .title span {display: block; color: transparent; -webkit-text-stroke: 2px #d1ed5d; }
+footer .snsBox {font-size: 1.5vw; position: absolute; left: 0; bottom: 2%;}
+footer .copyright {font-size: 1.5vw; position: absolute; right: 0; bottom: 2%;}

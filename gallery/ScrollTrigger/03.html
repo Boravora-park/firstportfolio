@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.trigger</title>
+    <link rel="stylesheet" href="css/03.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner a">
+                <a href="#" class="logo"><img src="img/ex_3/logo.png" alt="로고이미지"></a>
+                <ul class="gnb">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="inner b">
+                <a href="#" class="logo"><img src="img/ex_3/logo_icon.png" alt=""></a>
+                <a href="#" class="menu"><span></span><span></span></a>
+            </div>
+        </header>
+        <section class="visual bg" data-color="#151515">
+            <div class="inner">
+                <div class="textBox">
+                    <h2 class="title">
+                        <span>Art Direction</span>
+                        <span>web & Digital</span>
+                        <span>Design</span>
+                    </h2>
+                </div>
+                <div class="textBox">
+                    <span class="subTitle">
+                        Siamo un'agenzia di comunicazione italiana pluripremiata, specializzata in digital creative experiences.
+                    </span>
+                    <span class="text">
+                        Grazie ad un team di talenti giovani, dinamici e motivati, da oltre 15 anni, realizziamo progetti all’avanguardia, dal design unico e innovativo, unendo creatività, strategia e tecnologia.
+                    </span>
+                </div>
+                <div class="aniBox">
+                    <span class="spin"><img src="img/ex_3/img_0.png" alt=""></span>
+                    <img src="img/ex_3/arrow.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <ul class="list">
+                <li data-color="#d53f41" class="bg">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_1.jpg" alt="이미지1">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Calliope <span class="parallax">Live the Beauty</span></h2>
+                        <span class="subTitle">Shooting .Ads Campaign</span>
+                        <span class="text parallax">Concept, Scouting, Casting, Art Direction, Produzione</span>
+                    </div>
+                </li>
+                <li data-color="#d0dc9d">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_2.jpg" alt="이미지2">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Cromia <span class="parallax">Storie di stile</span></h2>
+                        <span class="subTitle">Shooting .Ads Campaign</span>
+                        <span class="text parallax">Concept, Scouting, Casting, Art Direction, Produzione</span>
+                    </div>
+                </li>
+                <li data-color="#efc5c9">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_3.jpg" alt="이미지3">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Keys<span class="parallax">Website</span></h2>
+                        <span class="subTitle">Web & Digital / Ecommerce Website</span>
+                        <span class="text parallax">Art Direction, Design, UI,UX,Development</span>
+                    </div>
+                </li>
+                <li data-color="#cad99e">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_4.jpg" alt="이미지3">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Laura pausini<span class="parallax">Simili</span></h2>
+                        <span class="subTitle">Web & Digital / personal Website</span>
+                        <span class="text parallax">Art Direction, Design, UI,UX,Development</span>
+                    </div>
+                </li>
+                <li data-color="#4b5764">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_5.jpg" alt="이미지3">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Double Eight <span class="parallax">Iceland</span></h2>
+                        <span class="subTitle">Shooting / Adv Campaign</span>
+                        <span class="text parallax">Concept, Scouting, Casting, Art Direction, Produzione</span>
+                    </div>
+                </li>
+                <li data-color="#345430">
+                    <div class="imgBox">
+                        <img src="img/ex_3/img_6.jpg" alt="이미지3">
+                    </div>
+                    <div class="textBox">
+                        <h2 class="title">Lamborghini<span class="parallax">We made it</span></h2>
+                        <span class="subTitle">Identity</span>
+                        <span class="text parallax">Brand Identity per L'evento "year Celebration" in Collaborazione con Free Event</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <footer class="bg" data-color="#151515">
+            <div class="inner">
+                <div class="textBox">
+                    <a href="mailto:abcde@naver.com" class="title">
+                        Let's Keep in touch <span>abcde@naver.com</span>
+                    </a>
+                </div>
+                <div class="snsBox">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="copyright">bora & copy2023</div>
+            </div>
+        </footer>
+    </div>
+<!--     <script>
+    gsap.registerPlugin(ScrollTrigger);
+        /*  0. visual active클래스 붙이기 */
+        let visual = gsap.utils.toArray (".visual"); 
+            
+            ScrollTrigger.create({
+                trigger:visual,
+                start:'top center',
+                end:'bottom center',
+                toggleClass:{targets:visual, className:"active"},
+                /* markers:true */
+            });
+        //1.x축 horizontalScroll
+/*         let list = gsap.utils.toArray(".portfolio .list li");
+
+        let scrollTween = gsap.to(list,{
+            XPercent:-100 * (list.length - 1),
+            ease:"none",
+            scrollTrigger:{
+                trigger:".portfolio",
+                pin:true,
+                scrub:1,
+                end:"+=6000",
+                toggleClass:{targets:'header', className:"active"}
+            }
+        }); */
+    
+    let list = gsap.utils.toArray(".portfolio .list li");
+
+        let scrollTween = gsap.to(list, {
+        xPercent: -100 * (list.length - 1),
+        ease: "none", //수평이동 스크롤에서는 ease:"none"필수
+        scrollTrigger: {
+            trigger: ".portfolio",
+            pin: true,
+            scrub: 1,
+            end: "+=6000", //끝 위치를 결정 높게 쓸수록 느려짐(기본값은 bottom top)
+            toggleClass: {targets: 'header', className: "active"} //header에 액티브 클래스 추가
+        }
+    });   
+
+/*     
+- 여기까지 작성하면 현재 레이아웃이 수직->수평->수직 이런형태의 레이아웃이라 백그라운드 컬러가 자연스럽게 안바뀜.
+- 첫번째 list li 는 markers로 확인해보면 트리거가 실행이 안되서 빨간색으로 변경이 안되는것을 볼수있음
+- 위의 문제들을 수정하기 위해  수직 스크롤용 백그라운드도 스크립트도 추가해야함
+ */
+    //2.wrap 백그라운드 컬러 변경(수평스크롤용)
+
+    
+/*     gsap.utils.toArray(".portfolio .list li").forEach(function(li){
+        
+        var color = li.getAttribute('data-color');
+        ScrollTrigger.create({
+            trigger:li,
+            containerAnimaion: scrollTween,
+            start:"center",
+            end:"center",
+            scrub:true,
+            onEnter: () => psap.to('.wrap'{
+                backgroundColor:color,
+                duration:0.5
+            }),
+            onEnterBack: () => gsap.to('.wrap' {
+                backgroundColor:color,
+                duration:0.5
+            })
+        }) 
+
+    });
+     */
+
+    gsap.utils.toArray(".portfolio .list li").forEach(function (li) {
+
+        var color = li.getAttribute('data-color'); 
+
+        ScrollTrigger.create({
+            trigger: li,
+            containerAnimation: scrollTween, //수평이동 스크롤에서 scrolltrigger인식을 위해 꼭 써줘야함
+            start: " center",
+            end: " center",
+            scrub: true,
+            onEnter: () => gsap.to('.wrap', {
+                backgroundColor: color,
+                duration: 0.5
+            }),
+            onEnterBack: () => gsap.to('.wrap', {
+                backgroundColor: color,
+                duration: 0.5
+            })
+        });
+    }); 
+    //3.visual footer wrap 백그라운 컬러 변경(수직 스크롤용)
+/*     gsap.utils.toArray(".bg").forEach(function(bg){
+        var color =bg.getAttribute('data-color');
+        ScrollTrigger.create({
+            trigger: bg,
+            start: "49% center",
+            end:"80% center",
+            scrub:true,
+            onEnter:() => gsap.to('.wrap', {
+                backgroundColor: color,
+                duration:0.5,
+            }),
+            onEnterBack: () => gsap.to('.wrap', {
+                backgroundColor: color,
+                duration: 0.5
+            }),
+            onLeave:() => gsap.to('wrap',{
+                backgroundColor: #d53f41,
+                duration: 0.5
+            })
+        })
+    });
+ */
+            gsap.utils.toArray(".bg").forEach(function (bg) { 
+
+        var color = bg.getAttribute('data-color');
+
+        ScrollTrigger.create({
+            trigger: bg,
+            start: "49% center",
+            end: "80% center",
+            scrub: true,
+            onEnter: () => gsap.to('.wrap', { 
+                backgroundColor: color,
+                duration: 0.5
+            }),
+            onEnterBack: () => gsap.to('.wrap', {
+                backgroundColor: color,
+                duration: 0.5
+            }), 
+            onLeave: () => gsap.to('.wrap', { //스크롤위치가 "끝"을 지나 앞으로 이동할 때
+                backgroundColor: '#d53f41', 
+                duration: 0.5
+            })
+        });
+    }); 
+    /* 
+    - 여기까지 완료하면 1가지의 문제가 
+    첫번째 list li 뒤로 갔다가 맨처음으로 돌아갈때 다시 빨간 배경이 안바뀜
+    그래서 첫번째 list li에 .bg클래스를 똑같이 추가해줌
+    */
+    gsap.utils.toArray(".imgBox").forEach(function(imgBox){
+        
+        gsap.to(imgBox,{
+            scale:1,
+            scrollTrigger: {
+                trigger:imgBox,
+                containerAnimation:scrollTween,
+                start:'center 100%',
+                end:'center 60%',
+                scrub:true
+            }
+
+        })
+        //여기까지 작성하면 스크롤에 따라 imgBox가 보이면 스케일 1로 커짐
+        //뒤로 넘어갈때 다시 작아지도록 하는 스크립트 추가
+        ScrollTrigger.create({
+            trigger:imgBox,
+            containerAnimation:scrollTween,
+            start:'center 100%',
+            end:'center 0%',
+            scrub:true,
+            onLeave: () => gsap.to('.imgBox', { //스크롤위치가 "끝"을 지나 앞으로 이동할 때
+                scale:0.3, 
+                duration: 1
+            }),
+            onEnterBack: () => gsap.to('.imgBox', {
+                scale:1, 
+                duration: 1
+            }),
+        });
+    
+    });
+
+    </script> -->
+    <script>  
+    
+        gsap.registerPlugin(ScrollTrigger); 
+               
+        // 0. visual active 클래스 붙이기
+        let visual = gsap.utils.toArray(".visual");
+            
+        ScrollTrigger.create({
+            trigger: visual,
+            start: "top center",
+            end: "bottom center",
+            toggleClass: {targets: visual, className: "active"},
+            markers:true
+        });
+                
+                
+        // 1. x축 horizontalscroll
+        let list = gsap.utils.toArray(".portfolio .list li");
+        
+        let scrollTween = gsap.to(list, {
+            xPercent: -100 * (list.length - 1),
+            ease: "none", // 수평이동 스크롤에서는 ease: "none" 필수
+            scrollTrigger: {
+              trigger: ".portfolio",
+              pin: true,
+              scrub: 1,
+              end: "+=6000", //ScrollTrigger의 끝 위치를 결정. 높게 쓸수록 느려짐 (기본값은  "bottom top")
+              toggleClass: {targets: 'header', className: "active"} // header active 애니메이션
+            }
+        });    
+               
+        // 2. wrap 백그라운드 컬러 변경 (수평 스크롤용)
+        gsap.utils.toArray(".portfolio .list li").forEach(function (li) {
+        
+            var color = li.getAttribute('data-color'); //HTML portfolio .list li 에 data-color 작성
+            
+            ScrollTrigger.create({
+                trigger: li,
+                containerAnimation: scrollTween, // 수평이동 스크롤에서 ScrollTrigger 인식을 위해 꼭 써줘야함
+                start: " center",
+                end: " center",
+                //markers:true, //마커로 확인하면 이해하는데 도움됩니다
+                scrub: true,
+                onEnter: () => gsap.to('.wrap', { // onEnter - 스크롤 위치가 "시작"을 지나 앞으로 이동할 때
+                    backgroundColor: color,
+                    duration: 0.5
+                }),
+                onEnterBack: () => gsap.to('.wrap', { // onEnterBack - 스크롤 위치가 "끝"을 지나 뒤로 이동할 때
+                    backgroundColor: color,
+                    duration: 0.5
+                })
+            });
+        }); 
+        /* 
+        - 여기까지 작성하면 현재 레이아웃이 수직->수평->수직 이런형태의 레이아웃이라
+          백그라운드 컬러가 자연스럽게 안바뀜.
+        - 첫번째 list li 는 markers로 확인해보면 트리거가 실행이 안되서 빨간색으로 
+          변경이 안되는것을 볼수있음
+        - 위의 문제들을 수정하기 위해  수직 스크롤용 백그라운드도 스크립트도 추가해야함
+         */   
+            
+        // 3. visual footer wrap 백그라운드 컬러 변경 (수직 스크롤용)
+        gsap.utils.toArray(".bg").forEach(function (bg) { // .visual과 footer를 다시 원래 배경 검정색으로 돌리기 위해 bg 클래스와 data-color 추가
+        
+            var color = bg.getAttribute('data-color');
+            
+            ScrollTrigger.create({
+                trigger: bg,
+                start: "49% center",
+                end: "80% center",
+                scrub: true,
+                onEnter: () => gsap.to('.wrap', { // onEnter - 스크롤 위치가 "시작"을 지나 앞으로 이동할 때
+                    backgroundColor: color,
+                    duration: 0.5
+                }),
+                onEnterBack: () => gsap.to('.wrap', { // onEnterBack - 스크롤 위치가 "끝"을 지나 뒤로 이동할 때
+                    backgroundColor: color,
+                    duration: 0.5
+                }), 
+                onLeave: () => gsap.to('.wrap', { // onLeave   - 스크롤 위치가 "끝"을 지나 앞으로 이동할 때
+                    backgroundColor: '#d53f41', // 빨간배경 변경을 위해추가
+                    duration: 0.5
+                })
+            });
+        });
+         /*
+         -여기까지 완료하면 1가지의 문제가
+          첫번째 list li 가 뒤로 갔다가 맨처음으로 돌아갈때 다시 빨간배경으로 안바뀜
+          그래서 첫번째 list li 에 .bg클래스 똑같이 추가해줍니다
+          */
+           
+        // 4. imgBox scale 애니 (css에서 .imgBox에 scale() 추가)
+        
+        gsap.utils.toArray(".imgBox").forEach(function (imgBox) { 
+        
+            gsap.to(imgBox, {
+                  scale: 1,
+                  scrollTrigger: {
+                    trigger: imgBox,
+                    containerAnimation: scrollTween,
+                    start: 'center 100%',
+                    end: 'center 60%',
+                    scrub: true,
+                  }
+            }) 
+            //여기까지 작성하면 스크롤에 따라 imgBox 보이면 스케일 1로 커집니다
+            
+            // 뒤로 넘어갈때 다시 작아지도록 스크립트 추가
+            ScrollTrigger.create({
+                trigger: imgBox,       
+                start: 'center 100%',
+                end: 'center 0%',
+                scrub: true,
+                containerAnimation: scrollTween,
+                onLeave: () => gsap.to(imgBox, { 
+                   scale: 0.3,
+                   duration: 1
+                }), 
+                onEnterBack: () => gsap.to(imgBox, { 
+                   scale: 1,
+                   duration: 1
+                }),
+            });        
+        });  
+            
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/01.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="visual">
+            <img src="img/ex_1/img_1.jpg" alt="비주얼이미지">
+            <h1>Stories de stile</h1>
+        </section>
+        <section class="infoProject">
+            <div class="inner">
+                <p class="imgBox"><img src="img/ex_1/img_2.jpg" alt="인트로이미지"></p>
+                <div class="textBox">
+                    <span class="title">CLIENTE</span>
+                    <span class="text">Cromia</span>
+                    <span class="title">TYPE</span>
+                    <span class="text">Adv Campaign Fall Winter 2020/21</span>
+                    <span class="title">WORKS</span>
+                    <span class="text">Concept, Scouting, Casting, Art Direction, Produzione</span>
+                    <span class="title">LOCATION</span>
+                    <span class="text">Teatro della Fortuna, Fano</span>
+                    <span class="title">ABOUT</span>
+                    <span class="text">Che cos’è una borsa per una donna? Un’amica fidata, capace di contenere tutto ciò di cui si ha bisogno, in grado di metterla a proprio agio in qualunque situazione accompagnandola nelle giornate piene e le notti di svago. Tutto questo è Cromia che con le sue linee raffinate, eleganti e iconiche vuole essere per le donne il bagaglio che contiene il mondo da portare sempre con sé. Cromia coniuga l’alta qualità dei materiali alla sapienza della manifattura. La sua natura è il colore, sapientemente unita all'attenzione per i particolari e all'innovazione.
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section class="concept">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <p class="imgBox">
+                            <img src="img/ex_1/img_3.jpg" alt="">
+                        </p>
+                    </li>
+                    <li>
+                        <p class="imgBox">
+                            <img src="img/ex_1/img_4.jpg" alt="">
+                        </p>
+                    </li>
+                    <li>
+                        <p class="imgBox">
+                            <img src="img/ex_1/img_5.jpg" alt="">
+                        </p>
+                    </li>
+                </ul>
+                <div class="textBox">
+                    <span class="title">Concept</span>
+                    <span class="text">Quanta bellezza si addensa nella parola “donna”: cinque lettere per racchiudere immaginari sofisticati e un mondo in cui tutto acquista fascino. Nella campagna Fall Winter 2020/21 realizzata per Cromia emerge un nuovo ritratto al femminile, che valorizza la gentilezza attenta della vita femminile e all'accessorio-borsa concepito come citazione d'autore all'interno di una cornice magica come il teatro. La borsa raccoglie le storie e i desideri delle donne perché pensate per essere fedeli alleate nelle molteplici occasioni d'uso della vita quotidiana moderna.</span>
+                </div>
+                <ul class="size">
+                    <li>
+                        <p class="imgBox"><img src="img/ex_1/img_6.jpg" alt=""></p>
+                    </li>
+                    <li>
+                        <p class="imgBox"><img src="img/ex_1/img_7.jpg" alt=""></p>
+                    </li>
+                    <li>
+                        <p class="imgBox"><img src="img/ex_1/img_8.jpg" alt=""></p>
+                    </li>
+                </ul>
+                <div class="textBox size">
+                    <span class="title">Do you like it?<b> Write Us!</b></span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        //gsap 코어에 플러그인을 등록하면 두 가지가 원활하게 함께 작동하고 빌드 도구, 번들러에서 흔들림 문제도 방지
+        //다음과 같이 플러그인을 사용하기 전에 한 번만 등록
+        //01.visual h1 opacity animation
+        gsap.to('.visual h1',{
+            opacity:1,
+            scrollTrigger:{
+                trigger:'.visual h1',
+                start:'top',
+                markers:true,
+                scrub:true
+            }
+
+        });
+    //02. visual img 스케일애니메이션  
+        gsap.to('.visual img',{
+        scale: 1.1,
+        scrollTrigger:{
+            trigger:'.visual img',
+            start: 'top',
+            scrub: true
+            }
+        });
+    //03.visaul영역고정
+    ScrollTrigger.create({
+        trigger: '.visual',
+        pin:true
+    });//앞에 있는 객체를 새롭게 생성
+
+    //04.imgBox active클래스 붙이기
+    let imgBox = gsap.utils.toArray('.imgBox');
+
+    imgBox.forEach((imgBox, i) => {
+        ScrollTrigger.create({
+            trigger:imgBox,
+            start:'top center',
+            toggleClass:{targets:imgBox, className:'active'},
+            once:false
+        });
+    });
+
+    //05.textBox active클래스
+    let textBox = gsap.utils.toArray('.textBox');
+
+    textBox.forEach((textBox, i) => {
+        ScrollTrigger.create({
+            trigger:textBox,
+            start:'top bottom',
+            toggleClass:{targets:textBox, className:'active'},
+            once:false
+        });
+    });
+    </script>
+</body>
+</html>

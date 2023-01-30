@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* lay out */
+body {font-family: 'MonumentGrotesk',sans-serif; font-size: 0.85vw; font-weight: 400; line-height: 1.6;}
+.wrap {margin: 0 auto; position: relative; overflow: hidden; background: #d14244;}
+
+/* section */
+section {padding: 50px 0;}
+section .inner {width: 80%; margin: 0 auto;}
+
+/* visual */
+.visual {position: relative; padding: 150px 0 0; overflow: hidden;} 
+.visual .inner {width: 80%; display: flex; justify-content: space-between; margin-left: 18%;}
+.visual .inner .textBox {width: 55%;}
+.visual .inner .textBox span {color: #fff; display: block; margin: 30px 0; opacity: 0; transition: all 1s;}
+.visual .inner .textBox .title {font-size: 10vw;}
+.visual .inner .textBox .subTitle {font-size: 1.5vw; margin-bottom: 40px;}
+.visual .inner .aniBox {width: 22%; margin-top: 10%; margin-right: 8%; position: relative;}
+.visual .inner .aniBox img {width: 100%; animation-name: spin; animation-duration: 30s; animation-iteration-count: infinite; animation-timing-function: linear;}
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+    
+}
+.visual .inner .aniBox .textBox {position: absolute; font-size: 2vw; width: 100%; left: -33%; top: 33%; text-align: right; line-height: 1.2;}
+
+/* visual.active */
+.visual .textBox.active span {margin: 0; opacity: 1;}
+
+/* project */
+.project .mySwiper {padding: 100px 0; position: relative;}
+.project .swiper-slide {position: relative; }
+.project .swiper-slide .imgBox {clip-path: inset(18% 18% 18% 18% round 0%);
+transition: clip-path 0.6s, margin-top 0.6s;}
+.project .swiper-slide .imgBox img {width: 100%;}
+.project .swiper-slide:nth-child(3n) {margin-top: -50px;}
+.project .swiper-slide .textBox {position: absolute; z-index: 2; left: -25%; bottom: -10%; opacity: 0; transition: opacity 0.4s, left 0.4s; transition-delay: 0.2s ;}
+.project .swiper-slide .textBox span {line-height: 1.2; display: block;}
+.project .swiper-slide .textBox .title {font-size: 5vw; color: #fff;}
+.project .swiper-slide .textBox .text {font-size: 1.3vw; color: #d1ed5d;}
+
+/* swiper-slide-active */
+.project .swiper-slide.swiper-slide-active .imgBox {clip-path: inset(0% 0% 0% 0% round 0%); margin-top: 0;}
+.project .swiper-slide.swiper-slide-active .textBox {opacity: 1; left: -30%;}
+/* swiper-pagination */
+.project .swiper-pagination-fraction {position: absolute; bottom: 10%; width: auto; left: 75%; color: transparent; }
+.project .swiper-pagination-fraction:after {content: ''; position: absolute; width: 60%; height: 1px; background: #d1ed5d; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.project .swiper-pagination-current {margin-right: 120px; color: #1ded5d;}
+.project .swiper-pagination-total {color: #fff;}
+
+/* project */
+.project .nav {position: fixed; z-index: 100; top: 50%; left: 3%; transform: translateY(-50%); opacity: 0; width: 0; overflow: hidden; transition: opacity 0.6s; }
+.project .nav li {margin: 25px 0;}
+.project .nav li a {display: block; color: #fff; font-size: 12px; letter-spacing: 2px; position: relative; padding-left: 30px;}
+.project .nav li a:before {content: ''; width: 4px; height: 4px; background: #fff; position: absolute; left: 9px; top: 50%; transform: translateY(-50%); border-radius: 100%;}
+.project .nav li a:after {content: ''; width: 22px; height: 22px; background: none; position: absolute;
+left: 0; top: 50%; transform: translateY(-50%); border-radius: 100%; border: 1px solid #d1ed5d;}
+
+.project.active .nav{opacity: 1; width: auto;}
+.project.active .nav li a.active {color: #d1ed5d;}
+.project.active .nav li a.active:before {background: #d1ed5d;}

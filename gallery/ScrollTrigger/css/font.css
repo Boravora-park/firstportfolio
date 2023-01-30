@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@font-face {
+ font-family: 'MonumentGrotesk';
+ font-weight: 400;
+ src: url(../fonts/MonumentGrotesk-Regular.woff2) format('woff2');
+}
+@font-face {
+ font-family: 'MonumentGrotesk';
+ font-weight: 500;
+ src: url(../fonts/MonumentGrotesk-Medium.woff2) format('woff2');
+}
+@font-face {
+ font-family: 'MonumentGrotesk';
+ font-weight: 600;
+ src: url(../fonts/MonumentGrotesk-Bold.woff2) format('woff2');
+}
