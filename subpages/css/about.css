@@ -38,7 +38,7 @@ body {font-size: 16px;}
 .bo {font-family: 'BodoniFLF-Italic'; font-style: italic; }
 .ko {font-family: 'Noto Sans KR', sans-serif;}
 
-.wrap {width: 100%; position: relative;}
+.wrap {width: 100%; position: relative; color: #222;}
 
 
 /* main */
@@ -240,7 +240,7 @@ body {font-size: 16px;}
 .story .inner .books .contents .side .Chapter {transform: rotate(90deg); font-weight: bold;}
 .story .inner .books .contents .text {width: 90%; height: 600px; background:#6FA6D4; border: 1px solid #222; opacity: 0; transition: opacity 0.2s; transition-delay: 0.2s;}
 .story .inner .books li.on .contents .text {opacity: 1;transition: opacity 0.2s; }
-.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; object-fit: cover; align-items: center; }
+.story .inner .books .contents .text .video {margin: 20px auto; width: 80%; -o-object-fit: cover; object-fit: cover; align-items: center; }
 .story .inner .books .contents .text .kor {font-size: 10px; margin-bottom: 20px; width: 82%; margin: 0 auto;}
 .story .inner .books .contents .text .eng {font-size: 12px; width: 82%; margin: 0 auto; }
 
