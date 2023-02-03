@@ -47,7 +47,13 @@ body {font-size: 16px;}
 .main .inner {width: 95%; margin: 0 auto; position: relative;}
 
 .main .inner svg {width: 100%;  margin-top: -200px; margin-left: 400px; z-index: -1; }
-.main .inner svg path {fill: none; stroke: #656565; stroke-width: 2; stroke-dasharray: 11075; stroke-dashoffset: 0; animation-name: line; animation-duration: 5s; animation-iteration-count: infinite;}
+.main .inner svg path {fill: none; stroke: #656565; stroke-width: 2; stroke-dasharray: 11075; stroke-dashoffset: 0; -webkit-animation-name: line; animation-name: line; -webkit-animation-duration: 5s; animation-duration: 5s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+
+
+@-webkit-keyframes line {
+    0% {stroke-dashoffset: 11075;}/* 0% {stroke-dashoffset: 10337;} */
+    100% {stroke-dashoffset: 0;}
+}
 
 
 @keyframes line {
@@ -155,20 +161,36 @@ body {font-size: 16px;}
 .process{width: 100%; overflow: hidden; margin-bottom: 200px;}
 .process .tit {width: 100%; text-align: center; margin: 50px auto; font-size: 3rem;}
 .process .subTit {width: 100%; text-align: center; margin: 20px auto 50px;}
-.process .frame {width: 100%; margin: 0 auto; display: flex; justify-content: space-between;}
-.process .frame p.img {width: 20%; float: left; margin: 0 auto; margin-left: 20px; } 
-
+.process .frame {width: 80%; margin: 0 auto; display: flex; justify-content: space-between;}
+.process .frame p.img {width: 20%; margin: 0 auto; text-align: center;} 
 .process .frame p.img img {width: 100%;}
 /* 공통 애니메이션 */
+@-webkit-keyframes opacity {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 @keyframes opacity {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@-webkit-keyframes slideup {
+    0% {opacity: 0; transform: translateY(50px);}
+    30% {opacity: 0; transform: translateY(50px);}
+    50% {opacity: 0.5; transform: translateY(50px);}
 }
 
 @keyframes slideup {
     0% {opacity: 0; transform: translateY(50px);}
     30% {opacity: 0; transform: translateY(50px);}
     50% {opacity: 0.5; transform: translateY(50px);}
+}
+
+@-webkit-keyframes maintextAni{ 
+    0%{opacity: 0; transform: translateY(-300px);}
+    30%{opacity: 0; transform: translateY(-300px);}
+    70%{opacity: 1; transform: translateY(-100px);}
+
 }
 
 @keyframes maintextAni{ 
@@ -280,4 +302,4 @@ body {font-size: 16px;}
     .concept .inner .color .left .main {width: 100%; }
     .concept .inner .color .left .main li > span {width: 80px; height: 80px; line-height: 80px;}
     .concept .inner .color .right .sub {width: 100%;}
-}
+}}
