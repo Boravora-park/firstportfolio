@@ -56,22 +56,22 @@ body {font-size: 16px;}
 
 
 
-/* clonecording */
-.clonecording {width: 100%; overflow: hidden; margin: 100px auto;}
-.clonecording .inner {width: 80%; margin: 0 auto;}
-.clonecording .inner .contents {width: 100%; margin: 0 auto; color: #222; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between;}
-.clonecording .inner .contents li {width: 45%; float: left; text-align: right; margin-bottom: 50px;  transition: all 0.2s;}
-.clonecording .inner .contents li p.img {width: 100%; overflow: hidden; position: relative;}
-.clonecording .inner .contents li p.img img {width: 100%;}
+/* clonecoding */
+.clonecoding {width: 100%; overflow: hidden; margin: 100px auto;}
+.clonecoding .inner {width: 80%; margin: 0 auto;}
+.clonecoding .inner .contents {width: 100%; margin: 0 auto; color: #222; overflow: hidden; display: flex; flex-wrap: wrap; justify-content: space-between;}
+.clonecoding .inner .contents li {width: 45%; float: left; text-align: right; margin-bottom: 50px;  transition: all 0.2s;}
+.clonecoding .inner .contents li p.img {width: 100%; overflow: hidden; position: relative;}
+.clonecoding .inner .contents li p.img img {width: 100%;}
 
-.clonecording .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size:1.7vw;}
-.clonecording .inner .contents li p.txt span {font-size: 1.3vw;}
-.clonecording .inner .contents li:nth-child(2n){margin-left: 50px;}
+.clonecoding .inner .contents li p.txt {margin-top: 10px; color: #656565; font-size:1.7vw;}
+.clonecoding .inner .contents li p.txt span {font-size: 1.3vw;}
+.clonecoding .inner .contents li:nth-child(2n){margin-left: 50px;}
 
-.clonecording .inner .contents li:hover p.img img {transform: scale(1.1); transition: all 0.2s;}
-/* .clonecording .inner .contents li p.img:after {position: absolute; content: ''; width: 100%; height: 100%; background: rgba(0,0,0,0.1); top: 0; left: 0; opacity: 0; transition: all 0.2s;} */
-.clonecording .inner .contents li:hover p.img:after {width: 100%; height: 100%; opacity: 1; transition: all 0.2s;}
-.clonecording .inner .contents li:hover p.txt {font-weight: 600; color: #222; font-style: italic;}
+.clonecoding .inner .contents li:hover p.img img {transform: scale(1.1); transition: all 0.2s;}
+/* .clonecoding .inner .contents li p.img:after {position: absolute; content: ''; width: 100%; height: 100%; background: rgba(0,0,0,0.1); top: 0; left: 0; opacity: 0; transition: all 0.2s;} */
+.clonecoding .inner .contents li:hover p.img:after {width: 100%; height: 100%; opacity: 1; transition: all 0.2s;}
+.clonecoding .inner .contents li:hover p.txt {font-weight: 600; color: #222; font-style: italic;}
 
 /* site renewal */
 .renewal {width: 100%; height: 110vh; overflow: hidden; color: #ccc;}
@@ -99,8 +99,8 @@ body {font-size: 16px;}
 .test .inner .scrollz {width: 60%; margin: 0 auto; z-index: 999; position: relative; }
 
 .test .inner .scrollz a {width: 100%;}
-.test .inner .scrollz a video{width: 100%; object-fit: cover; margin: 0 auto;  z-index: 999; text-align: center; position: relative; transition: all 0.2s; transform: scale(1);}
-.test .inner .scrollz a video:hover {filter: grayscale(100%); transform: scale(0.9); transition: all 0.2s;}
+.test .inner .scrollz a video{width: 100%; -o-object-fit: cover; object-fit: cover; margin: 0 auto;  z-index: 999; text-align: center; position: relative; transition: all 0.2s; transform: scale(1);}
+.test .inner .scrollz a video:hover {-webkit-filter: grayscale(100%);filter: grayscale(100%); transform: scale(0.9); transition: all 0.2s;}
 .test .inner .scrollz .click {width: 100%; font-size: 1.5rem; text-align: center; margin-top: 20px; }
 .test .inner .scrollz .mobile {margin-top: 20px; text-align: center; opacity: 0;}
 .test .inner .scrollTrigger {width: 100%; z-index: 999; position: relative;}
@@ -169,7 +169,7 @@ body {font-size: 16px;}
 }
 
 @media screen and (max-width: 1440px) {
-    .clonecording .inner {width: 90%;}
+    .clonecoding .inner {width: 90%;}
     .renewal .inner .left .txt {margin-top: 54vh; font-size: 3vh;}
     .renewal .inner .right .site p.img {top: 42vh;}
     .renewal .inner {width: 98%;}
@@ -205,11 +205,11 @@ body {font-size: 16px;}
     .title {font-size: 3rem; margin-right: -50px;}
     .main .inner .cc {display: none;}
     .main .inner .tit {margin-top: 10vh; }
-    .clonecording {margin: 20px auto;}
-    .clonecording .inner .contents {width: 98%;margin: 0 auto;}
-    .clonecording .inner .contents li {width: 100%; float: none;}
-    .clonecording .inner .contents li:nth-child(2n) {margin-left: 0;}
-    .clonecording .inner .contents li p.txt {font-size: 1rem}
+    .clonecoding {margin: 20px auto;}
+    .clonecoding .inner .contents {width: 98%;margin: 0 auto;}
+    .clonecoding .inner .contents li {width: 100%; float: none;}
+    .clonecoding .inner .contents li:nth-child(2n) {margin-left: 0;}
+    .clonecoding .inner .contents li p.txt {font-size: 1rem}
     .renewal .inner .left .button {font-size: 11px;}
     .ncs .inner .tit {font-size: 2rem;}
     .test .inner .tit {font-size: 2rem;}
