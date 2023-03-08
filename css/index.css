@@ -298,20 +298,20 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 .portfolio .inner .innerTop .top .left { display: inline-block; float: left; margin-top: 30px; font-style: italic;}
 .portfolio .inner .innerTop .top .right {text-align: right; float: right; margin-top: 30px; font-style: italic;}
 .portfolio .inner .innerTop .contents {width: 100%; text-align: center; margin-bottom: 100px; font-size: 1.5rem; font-weight: bold;}
-.portfolio .inner .cording {width: 98%; display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto;}
-.portfolio .inner .cording li {width: 50%; transition: all 0.2s; margin-bottom: 200px;}
-.portfolio .inner .cording li a {width: 30%;}
-.portfolio .inner .cording li:nth-child(1) {text-align: right; padding-top: 200px; box-sizing: border-box; }
-.portfolio .inner .cording li:nth-child(2) {margin-top: 300px;}
-.portfolio .inner .cording li:nth-child(3) {margin-top: 200px; text-align: right;}
-.portfolio .inner .cording li:nth-child(4) { text-align: left; }
-.portfolio .inner .cording li:nth-child(5) { text-align: center; margin-top: -100px;}
-.portfolio .inner .cording li:nth-child(7) { text-align: center; }
-.portfolio .inner .cording li:nth-child(8) { text-align: left; margin-top: 500px;}
-.portfolio .inner .cording li a img {position: relative; opacity: 0; transition: all 0.4s; transform: translateY(200px) scale(0.5); transition-delay: 0.2s;}
-.portfolio .inner .cording li.active a img {opacity: 1; transition: all 0.3s; transform: translateY(0%) scale(1);}
+.portfolio .inner .coding {width: 98%; display: flex; justify-content: space-between; flex-wrap: wrap; margin: 0 auto;}
+.portfolio .inner .coding li {width: 50%; transition: all 0.2s; margin-bottom: 200px;}
+.portfolio .inner .coding li a {width: 30%;}
+.portfolio .inner .coding li:nth-child(1) {text-align: right; padding-top: 200px; box-sizing: border-box; }
+.portfolio .inner .coding li:nth-child(2) {margin-top: 300px;}
+.portfolio .inner .coding li:nth-child(3) {margin-top: 200px; text-align: right;}
+.portfolio .inner .coding li:nth-child(4) { text-align: left; }
+.portfolio .inner .coding li:nth-child(5) { text-align: center; margin-top: -100px;}
+.portfolio .inner .coding li:nth-child(7) { text-align: center; }
+.portfolio .inner .coding li:nth-child(8) { text-align: left; margin-top: 500px;}
+.portfolio .inner .coding li a img {position: relative; opacity: 0; transition: all 0.4s; transform: translateY(200px) scale(0.5); transition-delay: 0.2s;}
+.portfolio .inner .coding li.active a img {opacity: 1; transition: all 0.3s; transform: translateY(0%) scale(1);}
 
-.portfolio .inner .cording li a img:before {content: ''; position: absolute; width: 100%; height: 100%; background: #ddd; opacity: 1;}
+.portfolio .inner .coding li a img:before {content: ''; position: absolute; width: 100%; height: 100%; background: #ddd; opacity: 1;}
 
 /* footer */
 .end{width: 100%; overflow: hidden;}
@@ -374,10 +374,10 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .portfolio .inner .innerTop .top .tit img {margin:0 30px;}
     .portfolio .inner .innerTop .top .left {margin-top: 15px;}
     .portfolio .inner .innerTop .top .right {margin-top: 10px;}
-    .portfolio .inner .cording li a img  {width: 76%;}    
-    .portfolio .inner .cording li:nth-child(2) a img  {width: 90%; text-align: left;}
-    .portfolio .inner .cording li:nth-child(3) a img  {width: 30%;}
-    .portfolio .inner .cording li:nth-child(8) {margin-top: 100px;}
+    .portfolio .inner .coding li a img  {width: 76%;}    
+    .portfolio .inner .coding li:nth-child(2) a img  {width: 90%; text-align: left;}
+    .portfolio .inner .coding li:nth-child(3) a img  {width: 30%;}
+    .portfolio .inner .coding li:nth-child(8) {margin-top: 100px;}
 
 
 }
@@ -406,7 +406,7 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
     .portfolio .inner .innerTop .top .left {font-size: 0.9rem; margin-top: 44px;}
     .portfolio .inner .innerTop .top .right {font-size: 0.9rem; text-align: left; margin-top: 44px;}
     .portfolio .inner .innerTop .contents {font-size: 1.1rem;}
-    .portfolio .inner .cording {margin-left: 63px;}
+    .portfolio .inner .coding {margin-left: 63px;}
 
 }
 @media screen and (max-width: 820px){
@@ -451,13 +451,13 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
 
     .portfolio .inner .innerTop .top .left {display: none;}
     .portfolio .inner .innerTop .top .right {display: none;}
-    .portfolio .inner .cording {width: 95%; margin: 0 auto; }
-    .portfolio .inner .cording li {width: 100%;}
-    .portfolio .inner .cording li a img {width: 60%;}
-    .portfolio .inner .cording li:nth-child(1){margin: 0;}
-    .portfolio .inner .cording li:nth-child(2){margin-top: 50px;}
-    .portfolio .inner .cording li:nth-child(3){margin-top: 0; text-align: center;}
-    .portfolio .inner .cording li:nth-child(5){margin-top: 20px; text-align: right;}
+    .portfolio .inner .coding {width: 95%; margin: 0 auto; }
+    .portfolio .inner .coding li {width: 100%;}
+    .portfolio .inner .coding li a img {width: 60%;}
+    .portfolio .inner .coding li:nth-child(1){margin: 0;}
+    .portfolio .inner .coding li:nth-child(2){margin-top: 50px;}
+    .portfolio .inner .coding li:nth-child(3){margin-top: 0; text-align: center;}
+    .portfolio .inner .coding li:nth-child(5){margin-top: 20px; text-align: right;}
 }
 
     @media screen and (max-width: 520px){
@@ -492,8 +492,8 @@ nav ul li:nth-child(5){-webkit-animation-duration: 0.6s;animation-duration: 0.6s
         .portfolio .inner .innerTop .top .tit {font-size: 1.5rem; margin: 0 auto;}
         .portfolio .inner .innerTop .contents {font-size: 0.8rem;}
 
-        .portfolio .inner .cording li {padding: 0;margin: 0; width: 100%; margin-bottom: 40px; text-align: center;}
-        .portfolio .inner .cording li a img {width: 60%;}
+        .portfolio .inner .coding li {padding: 0;margin: 0; width: 100%; margin-bottom: 40px; text-align: center;}
+        .portfolio .inner .coding li a img {width: 60%;}
     }
     @media screen and (max-width: 400px){
         .intro .inner .imgBox .top {margin-top: 470px;}
